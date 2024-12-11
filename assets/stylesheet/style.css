@@ -1,3 +1,62 @@
+@import "./fonts/cairo-2-webfont/style.css";
+@import "@tabler/icons-webfont/dist/tabler-icons.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter/Inter_28pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNeueMachinaBold';
+    src: url('./fonts/PPNeueMachina/PPNeueMachina-Ultrabold.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PPNeueMachina';
+    src: url('./fonts/PPNeueMachina/PPNeueMachina-Regular.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.font-pp-neue-machina {
+    font-family: "PPNeueMachina", "Cairo Bold", sans-serif;
+    font-weight: bold;
+}
+.font-pp-neue-machina-bold {
+    font-family: "PPNeueMachinaBold", "Cairo Bold", sans-serif;
+    font-weight: bold;
+}
+
+*, html, body {
+    font-family: 'Cairo Regular', sans-serif;
+    font-weight: 500;
+    @apply text-blue-950;
+}
+
+.font-inter {
+    font-family: 'Inter', "Cairo Regular", sans-serif;
+}
+.font-cairo-regular {
+    font-family: "Cairo Regular", sans-serif;
+}
+
+.button {
+    @apply bg-gradient-to-r;
+    @apply from-[#FF665D];
+    @apply to-[#FD5437];
+    @apply px-8;
+    @apply py-2;
+    @apply rounded-full;
+}
+
+.button.btn-box-shadow {
+    box-shadow: 0 0 15px 1px rgba(253, 84, 55, 0.71);
+}

@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@tabler/icons-vue": "^3.24.0",
+    "@tabler/icons-webfont": "^3.24.0",
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"

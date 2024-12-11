@@ -1136,6 +1136,25 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz#719df7fb41766bc143369eaa0dd56d8dc87c9958"
   integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
+"@tabler/icons-vue@^3.24.0":
+  version "3.24.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-vue/-/icons-vue-3.24.0.tgz#b3de789af85983273218d3a560e7ab6ed04d8989"
+  integrity sha512-LfrDZ0K7+d3SR3ffDiAWp7aDheVz3DsXsqB6S/R8ZD2pm9IMDeesbDphwQ2RNCyIUb55bzP0N+c8iblf92WtAw==
+  dependencies:
+    "@tabler/icons" "3.24.0"
+
+"@tabler/icons-webfont@^3.24.0":
+  version "3.24.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-webfont/-/icons-webfont-3.24.0.tgz#55d3261624fc5307679377e6bf0e1c2b16e22070"
+  integrity sha512-PqbkFapKx28sXYNmQOA4rrh3Q6wqsYRZ99ZkrHQIWMdy63G0d/O0XyiwQqFti266PhrEQACO9ytoeW6LFJHsGg==
+  dependencies:
+    "@tabler/icons" "3.24.0"
+
+"@tabler/icons@3.24.0":
+  version "3.24.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-3.24.0.tgz#a4fd4bbcaa95cea92fa653d427bd298c4d589c5e"
+  integrity sha512-qNis9e90QcdxAGV3wNIeX0Ba2R7ktm0cnqOToKHJfC2kj3fvJwEVLsw63K0/fm7NW8rSZjDSTQRmMnSg8g/wrg==
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
