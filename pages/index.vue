@@ -1,6 +1,6 @@
 <template>
   <Header/>
-  <div class="h-screen space-y-7 bg-no-repeat object-center bg-cover"
+  <div class="h-screen space-y-7 bg-no-repeat object-center bg-[#fdfcfc] bg-cover "
        style="background: url('/imgs/hero-bg-frame.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
     <main class="main">
       <Wrapper class="py-14 space-y-16">
@@ -28,11 +28,13 @@
               <div class="space-x-6">
                 <button type="button" class="button group">
                   <span class="text-white font-pp-neue-machina">All Program</span>
-                  <span class="ti ti-arrow-up rotate-[30deg] group-hover:rotate-[0deg] transition duration-300 text-xl pl-2 inline-block text-white"></span>
+                  <span
+                      class="ti ti-arrow-up rotate-[30deg] group-hover:rotate-[0deg] transition duration-300 text-xl pl-2 inline-block text-white"></span>
                 </button>
                 <button type="button" class="button group btn-box-shadow">
                   <span class="text-white font-pp-neue-machina">All Program</span>
-                  <span class="ti ti-arrow-up rotate-[30deg] group-hover:rotate-[0deg] transition duration-300 text-xl pl-2 inline-block text-white"></span>
+                  <span
+                      class="ti ti-arrow-up rotate-[30deg] group-hover:rotate-[0deg] transition duration-300 text-xl pl-2 inline-block text-white"></span>
                 </button>
               </div>
             </div>
@@ -53,7 +55,7 @@
       </div>
     </main>
   </div>
-  <section id="partners" class="pt-52 pb-16">
+  <section id="partners" class="pt-52 pb-24 bg-[#fdfcfc]">
     <Wrapper>
       <div class="space-y-16">
         <div class="space-y-4">
@@ -76,19 +78,129 @@
             <img src="/imgs/brands/02.png" alt="brand" class="w-16">
           </div>
         </div>
+        <div class="pt-20">
+          <div class="flex gap-96 items-center justify-between">
+            <div class="flex gap-6">
+              <div>
+                <img src="/imgs/components/04.png" alt="about-us" class="rounded-2xl">
+              </div>
+              <div class="relative mt-16">
+                <div class="absolute -top-6 -right-6 bg-white rounded-lg shadow-xl w-56 px-3 py-2.5">
+                  <div class="w-full flex justify-between">
+                    <p class="font-pp-neue-machina-bold text-2xl text-red-500">120k+</p>
+                    <img src="/imgs/icons/report-up.png" alt="report-up" class="w-7">
+                  </div>
+                  <p class="italic text-gray-600" style="line-height: 20px">Join our program <br>every year</p>
+                </div>
+                <img src="/imgs/components/05.png" alt="about-us" class="rounded-xl">
+              </div>
+            </div>
+            <div class="flex-1 space-y-6">
+              <p class="about-us-text text-red-500 italic inline ml-10">About Us</p>
+              <div class="space-y-6">
+                <p class="capitalize text-blue-950 text-5xl font-pp-neue-machina">Who <span class="text-indigo-600 font-pp-neue-machina-bold italic we-are">we are</span></p>
+                <p class="text-gray-600">Tafa3ul Hub <span class="text-red-600">is a dynamic and innovative hub powered by Tafa3ul Group and in partner with Fusteka
+                  Group</span> to  that fosters creativity, technology and brings together a community of imaginative
+                  individuals.</p>
+                <p class="text-gray-600">Our goal is to inspire a new generation and empower individuals to express their unique
+                  ideas and passions in south region of Iraq.</p>
+              </div>
+              <div class="space-x-10 pt-8">
+                <button class="py-2.5 px-6 bg-red-500/80 hover:bg-red-500/90 transition duration-300 text-white rounded-full">
+                  <span class="text-white font-pp-neue-machina text-sm">See more</span>
+                  <span class="ti ti-arrow-up-right text-white"></span>
+                </button>
+                <button class="py-2.5 px-6 bg-red-500/80 hover:bg-red-500/90 transition duration-300 text-white rounded-full shadow-red-400 button-drop-shadow shadow-xl">
+                  <span class="text-white font-pp-neue-machina text-sm">See more</span>
+                  <span class="ti ti-arrow-up-right text-white"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Wrapper>
+  </section>
+  <section class="bg-no-repeat py-24 w-full bg-cover space-y-10" style="background-image: url('/imgs/backgrounds/01.jpg')">
+    <Wrapper>
+      <div>
+        <p class="text-4xl text-white font-pp-neue-machina">Explore Our <span class="heading-underline font-pp-neue-machina bg-gradient-to-r from-[#a7df77] to-[#67d380] bg-clip-text text-transparent font-pp-neue-machina-bold italic">Podcast</span></p>
+        <div class="flex justify-between items-center">
+          <div class="py-4">
+            <p class="text-white font-cairo-regular leading-[24px]">Tafa3ul Hub Workshops are carefully crafted to provide participants with the  necessary tools,
+              <br> guidance and inspiration to explore their interests.</p>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+    <div class="pl-24">
+      <Swiper :modules="modules" :slides-per-view="3" :space-between="30">
+        <SwiperSlide v-for="slide in slides" :key="`slide-${slide}`">
+          <div class="py-2 px-2 space-y-6">
+            <div class="rounded-2xl ring-2 ring-gray-200 overflow-hidden">
+              <img :src="`/imgs/slides/${slide.image}`" alt="slide" class="w-full h-80 bg-cover object-cover">
+            </div>
+            <div class="pr-8">
+              <p class="text-white text-2xl pb-2 font-pp-neue-machina-bold">{{ slide.title }}</p>
+              <p class="text-white text-lg font-cairo-regular">{{ slide.body }}</p>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
   </section>
 </template>
 <script setup>
 // @ts-ignore
 import {Wrapper, Header} from "~/components/index.ts";
-
+import {Swiper, SwiperSlide} from "swiper/vue";
+import {Pagination, Navigation} from "swiper/modules"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 useHead({
   title: "Home | Web Design",
 })
+
+const modules = [Pagination, Navigation]
+
+const slides = [
+  {
+    title: "Workshop for Future Leaders",
+    body: "Auditor at Government Finance Sector with 6 years of experience in Finance &  Banking Sector",
+    image: "01.png"
+  },
+  {
+    title: "Workshop for Future Leaders",
+    body: "Auditor at Government Finance Sector with 6 years of experience in Finance &  Banking Sector",
+    image: "02.png"
+  },
+  {
+    title: "Workshop for Future Leaders",
+    body: "Auditor at Government Finance Sector with 6 years of experience in Finance &  Banking Sector",
+    image: "03.png"
+  },
+  {
+    title: "Workshop for Future Leaders",
+    body: "Auditor at Government Finance Sector with 6 years of experience in Finance &  Banking Sector",
+    image: "01.png"
+  },
+  {
+    title: "Workshop for Future Leaders",
+    body: "Auditor at Government Finance Sector with 6 years of experience in Finance &  Banking Sector",
+    image: "02.png"
+  },
+  {
+    title: "Workshop for Future Leaders",
+    body: "Auditor at Government Finance Sector with 6 years of experience in Finance &  Banking Sector",
+    image: "03.png"
+  },
+]
+
 </script>
 <style>
+
+
 .heading-gradient-text-clip {
   position: relative;
 }
@@ -115,5 +227,37 @@ useHead({
   width: 100%;
   height: 2px;
   @apply bg-red-500;
+}
+
+.we-are {
+  position: relative;
+}
+
+.we-are::after {
+  position: absolute;
+  content: "";
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  @apply bg-indigo-500;
+}
+
+.about-us-text {
+  position: relative;
+}
+
+.about-us-text::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -60%;
+  width: 50%;
+  height: 2px;
+  @apply bg-red-400;
+}
+
+.button-drop-shadow {
+  box-shadow: 0 0 30px coral;
 }
 </style>

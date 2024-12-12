@@ -1,6 +1,6 @@
 @import "./fonts/cairo-2-webfont/style.css";
 @import "@tabler/icons-webfont/dist/tabler-icons.css";
-
+/*@import "swiper/swiper.css";*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,18 +18,20 @@
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'PPNeueMachina';
     src: url('./fonts/PPNeueMachina/PPNeueMachina-Regular.ttf') format('opentype');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 }
 
 
 .font-pp-neue-machina {
     font-family: "PPNeueMachina", "Cairo Bold", sans-serif;
-    font-weight: bold;
+    font-weight: normal;
 }
+
 .font-pp-neue-machina-bold {
     font-family: "PPNeueMachinaBold", "Cairo Bold", sans-serif;
     font-weight: bold;
@@ -44,6 +46,7 @@
 .font-inter {
     font-family: 'Inter', "Cairo Regular", sans-serif;
 }
+
 .font-cairo-regular {
     font-family: "Cairo Regular", sans-serif;
 }
@@ -59,4 +62,18 @@
 
 .button.btn-box-shadow {
     box-shadow: 0 0 15px 1px rgba(253, 84, 55, 0.71);
+}
+
+.heading-underline {
+    position: relative;
+}
+
+.heading-underline::after {
+    position: absolute;
+    content: "";
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #a7df77, #67d380);
 }
