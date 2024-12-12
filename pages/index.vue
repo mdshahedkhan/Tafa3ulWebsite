@@ -152,7 +152,8 @@
 </template>
 <script setup>
 // @ts-ignore
-import {Wrapper, Header} from "~/components/index.ts";
+import Header from "~/components/Header.vue";
+import Wrapper from "~/components/Wrapper.vue";
 import {Swiper, SwiperSlide} from "swiper/vue";
 import {Pagination, Navigation} from "swiper/modules"
 import 'swiper/css';

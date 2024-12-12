@@ -1,5 +1,6 @@
 <template>
   <div class="w-[90%] mx-auto">
-    <slot />
+    <slot/>
   </div>
 </template>
+<script setup></script>

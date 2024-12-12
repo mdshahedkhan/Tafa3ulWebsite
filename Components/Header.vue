@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts" setup>
-import {Wrapper} from "~/Components";
+import Wrapper from "~/Components/Wrapper.vue";
 </script>
 <style>
 .navbar li a {
