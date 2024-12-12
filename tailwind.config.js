@@ -8,7 +8,11 @@ export default {
         "./app.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: "#FF665D"
+            }
+        },
     },
     plugins: [],
 }

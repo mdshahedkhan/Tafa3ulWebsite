@@ -60,8 +60,7 @@
       <Wrapper>
         <div class="space-y-16">
           <div class="space-y-4">
-            <p class="text-4xl capitalize text-center">Our <span
-                class="font-pp-neue-machina-bold italic text-red-500 partner-text">partners</span></p>
+            <p class="text-4xl capitalize text-center">Our <span class="font-pp-neue-machina-bold italic text-red-500 partner-text">partners</span></p>
             <p class="text-center text-gray-500 font-cairo-regular">Explore potential partnership opportunities with
               us.</p>
           </div>
@@ -123,6 +122,7 @@
       </Wrapper>
     </section>
     <ExplorePodcast />
+    <UpCommingEvent />
   </div>
 </template>
 <script setup>
