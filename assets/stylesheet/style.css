@@ -1,6 +1,6 @@
 @import "./fonts/cairo-2-webfont/style.css";
 @import "@tabler/icons-webfont/dist/tabler-icons.css";
-/*@import "swiper/swiper.css";*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -76,4 +76,7 @@
     width: 100%;
     height: 3px;
     background: linear-gradient(to right, #a7df77, #67d380);
+}
+.bg-primary {
+    background: linear-gradient(to right, #FF665D, #FD5437);
 }
