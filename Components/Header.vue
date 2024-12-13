@@ -1,29 +1,41 @@
 <template>
   <Wrapper>
     <div class="flex items-center justify-between w-full py-4">
-      <div class="flex gap-4 text-[18px] items-center">
-        <img src="/imgs/logo.png" alt="logo" class="w-16 h-16">
-        <p class="font-inter">Tafa3ul Hub</p>
-      </div>
-      <ul class="flex navbar">
-        <li><NuxtLink href="/">Home</NuxtLink></li>
-        <li><NuxtLink href="/programs">Programs</NuxtLink></li>
-        <li><NuxtLink href="/about-us">About Us</NuxtLink></li>
-        <li><NuxtLink href="/blogs">Blog</NuxtLink></li>
-        <li><NuxtLink href="/blogs" class="btn transition-all duration-200">Join</NuxtLink></li>
-        <li>
-          <a href="#">
-          <span class="text-lg text-blue-950 flex items-center gap-1">
-            <span class="ti ti-world"></span>
-            <span>EN</span>
-            <span class="ti ti-chevron-down"></span>
-          </span>
-          </a>
-        </li>
-      </ul>
+        <div class="h-16">
+          <Transition @enter="enter">
+            <div v-if="itemsVisible" class="flex gap-4 text-[18px] items-center">
+              <img src="/imgs/logo.png" alt="logo" class="w-16 h-16">
+              <p class="font-inter">Tafa3ul Hub</p>
+            </div>
+          </Transition>
+        </div>
+      <Transition @enter="enter">
+        <ul v-if="itemsVisible" class="flex navbar">
+          <li><NuxtLink href="/">Home</NuxtLink></li>
+          <li><NuxtLink href="/programs">Programs</NuxtLink></li>
+          <li><NuxtLink href="/about-us">About Us</NuxtLink></li>
+          <li><NuxtLink href="/blogs">Blog</NuxtLink></li>
+          <li><NuxtLink href="/blogs" class="btn transition-all duration-200">Join</NuxtLink></li>
+          <li>
+            <a href="#">
+            <span class="text-lg text-blue-950 flex items-center gap-1">
+              <span class="ti ti-world"></span>
+              <span>EN</span>
+              <span class="ti ti-chevron-down"></span>
+            </span>
+            </a>
+          </li>
+        </ul>
+      </Transition>
     </div>
   </Wrapper>
 </template>
+<script lang="ts" setup>
+import {useHeaderAnimation} from "~/hooks/useAnimation";
+const {enter, beforeEnter} = useHeaderAnimation()
+const itemsVisible = ref(false)
+onMounted(()=> setTimeout(() => itemsVisible.value = true, 1000))
+</script>
 
 <style>
 .navbar li a {
