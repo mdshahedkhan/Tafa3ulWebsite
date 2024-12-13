@@ -9,11 +9,11 @@
               <br> guidance and inspiration to explore their interests.</p>
           </div>
           <div class="space-x-4">
-            <button class="bg-transparent transition duration-150 group active:bg-[#58A534] ring-2 ring-[#58A534] rounded-full px-4 inline-block py-3 disabled:ring-green-700" @click="()=> handleNavigation('prev')">
-              <span class="ti ti-chevron-left text-3xl group-active:text-gray-300 text-[#797B7D] "></span>
+            <button class="bg-transparent transition duration-150 group active:bg-[#58A534] ring-2 group hover:ring-green-400 ring-[#58A534] active:ring-[#58A534] rounded-full px-4 inline-block py-3 disabled:ring-gray-300" @click="()=> handleNavigation('prev')">
+              <span class="ti ti-chevron-left text-3xl group-active:text-gray-300 text-[#797B7D] group-hover:text-green-400"></span>
             </button>
-            <button class="bg-transparent transition duration-150 group active:bg-[#58A534] ring-2 ring-[#58A534] rounded-full px-4 inline-block py-3 disabled:ring-green-700" @click="()=> handleNavigation('next')">
-              <span class="ti ti-chevron-right text-3xl group-active:text-gray-300 text-[#797B7D] "></span>
+            <button class="bg-transparent transition duration-150 group active:bg-[#58A534] ring-2 group hover:ring-green-400 ring-[#58A534] active:ring-[#58A534] rounded-full px-4 inline-block py-3 disabled:ring-gray-300" @click="()=> handleNavigation('next')">
+              <span class="ti ti-chevron-right text-3xl group-active:text-gray-300 text-[#797B7D] group-hover:text-green-400"></span>
             </button>
           </div>
         </div>
@@ -25,8 +25,8 @@
           <div class="py-2 px-2 space-y-6 cursor-pointer">
             <div class="rounded-2xl relative ring-2 ring-[#FF665D] overflow-hidden">
               <img :src="`/imgs/slides/${slide.image}`" alt="slide" class="w-full h-80 bg-cover object-cover">
-              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ring-2 rounded-full ring-[#FF665D] px-2 py-2 flex items-center">
-                  <span class="bg-primary inline-block px-3 py-2.5 rounded-full">
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ring-2 rounded-full bg-transparent hover:bg-[#FF665D90] group transition duration-300 ring-[#FF665D] px-2 py-2 flex items-center">
+                  <span class="bg-red-500 group-hover:bg-[#FF665D90] duration-300 transition inline-block px-3 py-2.5 rounded-full">
                     <IconPlayerPlayFilled class="text-4xl text-white" color="#fff"/>
                   </span>
               </div>
@@ -39,7 +39,7 @@
         </SwiperSlide>
       </Swiper>
       <div class="flex justify-center items-center w-full gap-1">
-        <span v-for="(slide, index) in slides" :key="`slide-dot-${index}`" @click="()=> goSlide(index)" :class="[index === activeIndex ? 'w-[32px] bg-[#2BE29C]':'w-[14px] bg-[#424A6F]','h-[8px]  rounded-full inline-block']"></span>
+        <span v-for="(_slide, index) in slides" :key="`slide-dot-${index}`" @click="()=> goSlide(index)" :class="[index === activeIndex ? 'w-[32px] bg-[#2BE29C]':'w-[14px] bg-[#424A6F]','h-[8px]  rounded-full inline-block']"></span>
       </div>
     </div>
   </section>
@@ -71,7 +71,3 @@ const handleNavigation = (actionType)=> {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

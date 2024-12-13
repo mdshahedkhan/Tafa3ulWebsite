@@ -77,6 +77,19 @@
     height: 3px;
     background: linear-gradient(to right, #a7df77, #67d380);
 }
+.heading-left-line{
+    margin-left: 40px;
+    position: relative;
+}
+.heading-left-line::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -45%;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(to right, #FF665D, #FD5437);
+}
 .bg-primary {
     background: linear-gradient(to right, #FF665D, #FD5437);
 }
