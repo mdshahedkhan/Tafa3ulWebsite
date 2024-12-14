@@ -102,3 +102,46 @@ export const EventsDummySlides = [
         role: "Mentors"
     },
 ]
+
+export const DummyTestimonials = [
+    [
+        {
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis nostrud exercitation ullamco, Lorem ipsum dolor sit amet, ",
+            image: "avatar-6.png",
+            name: "Sophie Moore",
+            describe: "Product Developer at Webflow"
+        },
+        {
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            image: "avatar-5.png",
+            name: "Sophie Moore",
+            describe: "Product Developer at Webflow"
+        },
+        {
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lquis nostrud exercitation ullamco, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            image: "avatar-4.png",
+            name: "Sophie Moore",
+            describe: "Product Developer at Webflow"
+        }
+    ],
+    [
+        {
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis nostrud exercitation ullamco, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            image: "avatar-5.png",
+            name: "Sophie Moore",
+            describe: "Product Developer at Webflow"
+        },
+        {
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ullamco, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            image: "avatar-6.png",
+            name: "Sophie Moore",
+            describe: "Product Developer at Webflow"
+        },
+        {
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis nostrud exercitation ullamco, Lorem ipsum dolor sit amet, incididunt ut labore et dolore magna aliqua",
+            image: "avatar-7.png",
+            name: "Sophie Moore",
+            describe: "Product Developer at Webflow"
+        },
+    ]
+]

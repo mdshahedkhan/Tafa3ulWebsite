@@ -26,7 +26,7 @@ import Wrapper from "~/components/Wrapper.vue";
           </div>
         </div>
         <div class="pt-20">
-          <div class="flex gap-96 items-center justify-between">
+          <div class="flex gap-40 items-center justify-between">
             <div class="flex gap-6">
               <div>
                 <img src="/imgs/components/04.png" alt="about-us" class="rounded-2xl">

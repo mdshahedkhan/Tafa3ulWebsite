@@ -77,10 +77,12 @@
     height: 3px;
     background: linear-gradient(to right, #a7df77, #67d380);
 }
-.heading-left-line{
+
+.heading-left-line {
     margin-left: 40px;
     position: relative;
 }
+
 .heading-left-line::before {
     position: absolute;
     content: "";
@@ -90,6 +92,19 @@
     height: 2px;
     background: linear-gradient(to right, #FF665D, #FD5437);
 }
+
 .bg-primary {
     background: linear-gradient(to right, #FF665D, #FD5437);
+}
+
+.swiper-wrapper .swiper-slide.swiper-slide-active {
+    @apply ml-60;
+}
+
+.text-primary-gradient {
+    @apply text-transparent;
+    @apply bg-gradient-to-r;
+    @apply from-[#FF665D];
+    @apply to-[#FD5437];
+    @apply bg-clip-text;
 }

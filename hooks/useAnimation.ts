@@ -1,11 +1,11 @@
-import gsap from "gsap"
+import timeline from "gsap"
 
 interface HeaderAnimationProps {
     beforeEnter?: (element: any) => void
     enter?: (element: any, done: () => void) => void
 }
 
-const timeline = gsap.timeline()
+
 export const useHeaderAnimation = function (): HeaderAnimationProps {
     return {
         beforeEnter: function (element: any) {
@@ -100,7 +100,6 @@ export const useHomeSectionAnimation = function () {
                     stagger: 0.2,
                 })
             }
-
             done()
         }
     }

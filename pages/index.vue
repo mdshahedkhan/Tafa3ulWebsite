@@ -1,7 +1,7 @@
 <template>
   <div class="overflow-hidden bg-[#fdfcfc]">
     <Header/>
-    <div class="h-screen space-y-7 bg-no-repeat object-center bg-[#fdfcfc] bg-cover " style="background: url('/imgs/hero-bg-frame.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    <div class="h-screen space-y-7 bg-[#fdfcfc]" style="background: url('/imgs/hero-bg-frame.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
       <main class="main">
         <Wrapper class="py-14 space-y-16">
           <Transition @enter="enter">
@@ -48,7 +48,7 @@
         </Wrapper>
         <div class="pl-12">
           <Transition @enter="enterHomeEvents">
-            <div v-if="visibleElement" class="flex justify-between">
+            <div v-if="visibleElement" class="flex justify-between pl-24">
               <div class="w-96">
                 <img src="/imgs/curve-text.png" alt="curve-text" class="w-40 mx-auto">
               </div>
@@ -65,6 +65,8 @@
     <AboutSection />
     <ExplorePodcast />
     <UpCommingEvent />
+    <Achievement />
+    <Testimonial />
   </div>
 </template>
 <script setup>
@@ -73,6 +75,7 @@ import Header from "~/components/Header.vue";
 import Wrapper from "~/components/Wrapper.vue";
 import AboutSection from "~/components/AboutSection.vue";
 import {useHomeSectionAnimation} from "~/hooks/useAnimation";
+import Achievement from "~/components/Achievement.vue";
 const {enter, enterItems, enterCounter, enterLeftSideAnimation, enterHomeEvents} = useHomeSectionAnimation()
 const visibleElement = ref(false);
 const startCounting = ref(false);
@@ -146,7 +149,5 @@ useHead({
 .button-drop-shadow {
   box-shadow: 0 0 30px coral;
 }
-.swiper-wrapper .swiper-slide.swiper-slide-active {
-  @apply ml-24;
-}
+
 </style>
