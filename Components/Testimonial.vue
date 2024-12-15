@@ -16,7 +16,7 @@ import {DummyTestimonials as Testimonials} from "~/constraints/DataSource";
         </div>
         <p class="text-gray-600 pr-40 text-lg">Read what our clients and partners have to say about their experiences with us.</p>
         <div class="space-y-9 mt-5 relative">
-          <div class="absolute top-0 left-0 bg-gradient-to-b from-transparent to-[#ffffff99] w-full h-full"></div>
+          <div class="absolute top-0 left-0 bg-gradient-to-b from-transparent from-30%  to-white/80 to-90% w-full h-full"></div>
           <EachTestimonial v-for="(testimonial, index) in Testimonials[0]" :key="`testimonial-item-${index}-left-side`" :activeIndex="0" :index="index" :testimonial="testimonial" />
         </div>
       </div>

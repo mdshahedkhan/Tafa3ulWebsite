@@ -102,6 +102,88 @@ export const EventsDummySlides = [
         role: "Mentors"
     },
 ]
+export const DummyEvents = [
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "03.png",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "01.png",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "04.png",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "05.jpeg",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "06.jpeg",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "07.jpeg",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "08.jpeg",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "09.jpeg",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "07.jpeg",
+        role: null
+    },
+    {
+        title: "Explore the future",
+        subTitle: "of game development",
+        author: "Abdulrahman Ahmed",
+        authorDescribe: "The director <br/> of Baghdad Game Lab (BGL)",
+        image: "01.png",
+        role: null
+    },
+]
 
 export const DummyTestimonials = [
     [
@@ -144,4 +226,75 @@ export const DummyTestimonials = [
             describe: "Product Developer at Webflow"
         },
     ]
+]
+
+export const DummyArticles = [
+    {
+        title: "Web Design Inspiration in 2024 to Inspire Yours",
+        description: "Lorem ipsum hub where like-minded individuals and organizations come together to create.....",
+        image: "01.png",
+    },
+    {
+        title: "Web Design Inspiration in 2024 to Inspire Yours",
+        description: "Lorem ipsum hub where like-minded individuals and organizations come together to create.....",
+        image: "03.jpeg",
+    },
+    {
+        title: "Web Design Inspiration in 2024 to Inspire Yours",
+        description: "Lorem ipsum hub where like-minded individuals and organizations come together to create.....",
+        image: "02.jpeg",
+    },
+    {
+        title: "Web Design Inspiration in 2024 to Inspire Yours",
+        description: "Lorem ipsum hub where like-minded individuals and organizations come together to create.....",
+        image: "03.jpeg",
+    },
+    {
+        title: "Web Design Inspiration in 2024 to Inspire Yours",
+        description: "Lorem ipsum hub where like-minded individuals and organizations come together to create.....",
+        image: "03.jpeg",
+    },
+    {
+        title: "Web Design Inspiration in 2024 to Inspire Yours",
+        description: "Lorem ipsum hub where like-minded individuals and organizations come together to create.....",
+        image: "02.jpeg",
+    },
+]
+export const DummyGallery = [
+    '06.png',
+    '08.png',
+    '09.jpeg',
+    '07.png',
+    '01.png',
+    '02.jpeg',
+    '03.png',
+    '04.png',
+    '05.jpeg'
+]
+
+export const DummyFrequentlyQuestions = [
+    {
+        title: "What is Tafa3ul?",
+        body: "Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips."
+    },
+    {
+        title: "Lorem ipsum dolor sit amet consectetur?",
+        body: "Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips."
+    },
+    {
+        title: "Lorem ipsum dolor sit amet consectetur?",
+        body: "Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips."
+    },
+    {
+        title: "Lorem ipsum dolor sit amet consectetur?",
+        body: "Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips."
+    },
+    {
+        title: "Lorem ipsum dolor sit amet consectetur?",
+        body: "Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips."
+    },
+    {
+        title: "Lorem ipsum dolor sit amet consectetur?",
+        body: "Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips."
+    },
 ]

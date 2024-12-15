@@ -34,7 +34,7 @@
 import {useHeaderAnimation} from "~/hooks/useAnimation";
 const {enter, beforeEnter} = useHeaderAnimation()
 const itemsVisible = ref(false)
-onMounted(()=> setTimeout(() => itemsVisible.value = true, 1000))
+onMounted(()=> setTimeout(() => itemsVisible.value = true, 100))
 </script>
 
 <style>

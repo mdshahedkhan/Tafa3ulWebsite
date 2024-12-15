@@ -67,6 +67,10 @@
     <UpCommingEvent />
     <Achievement />
     <Testimonial />
+    <LatestArticle />
+    <PhotoGallery />
+    <FrequentlyQuestion />
+    <Footer />
   </div>
 </template>
 <script setup>
@@ -76,6 +80,7 @@ import Wrapper from "~/components/Wrapper.vue";
 import AboutSection from "~/components/AboutSection.vue";
 import {useHomeSectionAnimation} from "~/hooks/useAnimation";
 import Achievement from "~/components/Achievement.vue";
+import PhotoGallery from "~/components/PhotoGallery.vue";
 const {enter, enterItems, enterCounter, enterLeftSideAnimation, enterHomeEvents} = useHomeSectionAnimation()
 const visibleElement = ref(false);
 const startCounting = ref(false);
