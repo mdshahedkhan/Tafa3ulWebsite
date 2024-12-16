@@ -5,7 +5,7 @@ import {DummyTestimonials as Testimonials} from "~/constraints/DataSource";
 
 <template>
   <section id="testimonial" class="pb-16 pt-32">
-    <Wrapper class="grid grid-cols-2 gap-16">
+    <Wrapper class="grid !grid-cols-2 !gap-16">
       <div class="flex flex-col gap-3">
         <div>
           <p class="heading-left-line text-sm !ml-14 inline-block italic text-[#FD5437]">Testimonial</p>

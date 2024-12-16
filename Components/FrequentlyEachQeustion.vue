@@ -1,10 +1,10 @@
 <template>
-  <div :class="`px-[1.5px] py-[2px] rounded-xl shadow-sm ring-2 ${isExpend ? 'ring-[#F04635]':'ring-gray-200'}`">
+  <div :class="`rounded-xl shadow-sm ${isExpend ? ringColor:'ring-gray-200'}`">
     <div class="w-full h-full py-6 px-6 space-y-4 bg-white overflow-hidden rounded-xl">
       <div class="flex items-center justify-between">
         <p :class="`text-xl ${isExpend ? 'font-pp-neue-machina-bold':'font-pp-neue-machina'} `">{{ option.title }}</p>
-        <button :class="`${isExpend ? 'bg-[#F04635]':'hover:bg-gray-100'} transition duration-300 px-2.5 py-1.5 rounded-full group`" @click="handleExpend">
-          <span :class="`${isExpend ? '-rotate-180 text-white':'text-[#F04635]'} ti ti-chevron-up group-active:-rotate-180 duration-300 transition inline-block`"></span>
+        <button :class="`${isExpend ? backgroundColor:'hover:bg-gray-100'} transition duration-300 px-2.5 py-1.5 rounded-full group`" @click="handleExpend">
+          <span :class="`${isExpend ? activeColor + '-rotate-180':color} ti ti-chevron-up group-active:-rotate-180 duration-300 transition inline-block`"></span>
         </button>
       </div>
       <Transition @enter="enter" @leave="leave">
@@ -16,11 +16,31 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import gsap from "gsap"
 const isExpend = ref(false);
 const handleExpend = ()=> isExpend.value = !isExpend.value
-defineProps(['option'])
+defineProps({
+  option: {
+    type: Object as () => Object,
+  },
+  color: {
+    type: String,
+    default: "text-[#F04635]"
+  },
+  activeColor: {
+    type: String,
+    default: `text-white`
+  },
+  backgroundColor: {
+    type: String,
+    default: "bg-[#F04635]"
+  },
+  ringColor: {
+    type: String,
+    default: 'ring-[#F04635] ring-2 px-[1.5px] py-[2px]'
+  }
+})
 const enter = (element, done)=> {
   gsap.from(element, {
     opacity: 0,
@@ -38,7 +58,3 @@ const leave = (element, done)=> {
   done()
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

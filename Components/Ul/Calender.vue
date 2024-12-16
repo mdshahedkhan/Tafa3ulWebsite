@@ -17,7 +17,6 @@
       <div v-for="day in daysInMonth" :key="'day-' + day" :class="`w-12 h-12 leading-[48px] rounded-full cursor-pointer text-gray-600 ${currentDate === currentYear+'-'+currentMonth+'-'+day ? 'bg-red-500 text-white':'bg-gray-50/50'}`" @click="selectDate(day)">{{ day }}
       </div>
     </div>
-    {{currentDate}}
   </div>
 </template>
 
@@ -63,7 +62,7 @@ const nextMonth = () => {
 const selectDate = (day) => {
   selectedDate.value = `${currentYear.value}-${currentMonth.value + 1}-${day}`
 
-  alert(`Selected Date: ${selectedDate}`)
+  alert(`Selected Date: ${selectedDate.value}`)
 }
 </script>
 

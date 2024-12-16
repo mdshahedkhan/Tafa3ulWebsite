@@ -98,7 +98,7 @@ const enterLeftSide = (element: Element): void => {
             <li><button class="font-pp-neue-machina italic text-sm">Hublive Session</button></li>
           </ul>
         </div>
-        <div class="grid grid-cols-2 gap-x-6 mt-14">
+        <div class="grid !grid-cols-2 !gap-6 mt-14">
           <EachEventCard v-for="(item, index) in events" width="w-[280px]" gap="gap-8" height="h-[400px]" :slide="item" :index="index" :key="`program-event-${index}`" />
         </div>
       </Wrapper>

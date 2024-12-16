@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import Calender from "~/components/Ul/Calender.vue";
 import PrimaryButton from "~/components/Ul/PrimaryButton.vue";
+useHead({
+  title: "Program Details"
+})
 </script>
 
 <template>
@@ -112,7 +115,6 @@ import PrimaryButton from "~/components/Ul/PrimaryButton.vue";
 }
 .background-image {
   background-size: cover;
-  background: linear-gradient(to right, #000, transparent 100%), url('/imgs/components/about-us.jpeg');
-  background-size: cover;
+  background: linear-gradient(to right, #000, transparent 100%), url('/imgs/components/details.jpeg');
 }
 </style>

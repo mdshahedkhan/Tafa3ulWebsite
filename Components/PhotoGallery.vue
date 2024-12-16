@@ -16,7 +16,7 @@ const images = computed(()=> {
         <p class="text-4xl font-pp-neue-machina">Photo <span class="heading-underline italic text-[#FF6357] font-pp-neue-machina-bold font-bold">Gallery</span></p>
         <p class="text-center">Explore our visual collection of inspiring moments, projects, and events.</p>
       </div>
-      <div class="grid grid-cols-3 gap-2">
+      <div class="grid !grid-cols-3 gap-2">
         <div v-for="(items, index) in images" class="space-y-2" :key="`image-group-${index}`">
           <div v-for="(image, imageIndex) in items" :key="`image-${imageIndex}`">
             <img :src="`/imgs/gallery/${image}`" class="w-full object-fill rounded-lg" :alt="image">

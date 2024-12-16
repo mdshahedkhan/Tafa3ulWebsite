@@ -298,3 +298,62 @@ export const DummyFrequentlyQuestions = [
         body: "Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips.Contact our support team Active Live Chat for any assistance or inquiries. Follow us for updates and financial tips."
     },
 ]
+
+
+
+export const DummyFrequentlyAboutPageQuestions = [
+    {
+        title: "Inspiring",
+        body: "Inspire new generation and empower individuals to ex-press their unique ideas and passions."
+    },
+    {
+        title: "Enrolling",
+        body: "Inspire new generation and empower individuals to ex-press their unique ideas and passions."
+    },
+    {
+        title: "Enrolling",
+        body: "Inspire new generation and empower individuals to ex-press their unique ideas and passions."
+    },
+    {
+        title: "Enrolling",
+        body: "Inspire new generation and empower individuals to ex-press their unique ideas and passions."
+    },
+]
+
+export const DummyTeamMembers = [
+    {
+        name: "Matthew Martinez",
+        position: "UI Designer",
+        image: "01.png"
+    },
+    {
+        name: "Robert Brown",
+        position: "Web Developer",
+        image: "02.png"
+    },
+    {
+        name: "David Taylor",
+        position: "Content Writer",
+        image: "02.png"
+    },
+    {
+        name: "Matthew Martinez",
+        position: "UI Designer",
+        image: "01.png"
+    },
+    {
+        name: "Robert Brown",
+        position: "Web Developer",
+        image: "02.png"
+    },
+    {
+        name: "David Taylor",
+        position: "Content Writer",
+        image: "02.png"
+    },
+    {
+        name: "Robert Brown",
+        position: "Web Developer",
+        image: "02.png"
+    }
+]
