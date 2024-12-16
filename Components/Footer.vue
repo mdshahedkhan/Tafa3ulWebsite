@@ -6,7 +6,7 @@
   <footer class="pt-16" style="background-image: url('/imgs/backgrounds/footer.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
     <Wrapper class="space-y-12">
       <div class="w-full bg-white py-10 px-8 rounded-lg space-y-10">
-        <div class="grid grid-cols-6 gap-8">
+        <div class="grid !grid-cols-6 gap-8">
           <div class="col-span-2">
             <div class="flex gap-4 text-[18px] items-center">
               <img src="/imgs/logo.png" alt="logo" class="w-16 h-16">

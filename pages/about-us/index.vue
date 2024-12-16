@@ -12,7 +12,7 @@ useHead({
       <Wrapper>
         <div class="py-20 h-[25vw] background-image rounded-2xl flex flex-col justify-end px-16 relative">
           <div class="bg-gradient-to-b rounded-2xl from-transparent to-red-500/50 absolute top-0 left-0 h-full w-full"></div>
-          <p class="z-10 text-transparent stroke-white text-8xl w-full font-pp-neue-machina-bold text-stroke">About Tafa3ul</p>
+          <p class="z-10 text-transparent stroke-white text-9xl w-full font-pp-neue-machina-bold text-stroke">About Tafa3ul</p>
           <p class="z-10 text-white font-pp-neue-machina-bold text-6xl w-full">About Tafa3ul</p>
         </div>
         <div class="py-24 flex">

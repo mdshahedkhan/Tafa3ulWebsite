@@ -15,7 +15,7 @@
           <li><NuxtLink href="/programs">Programs</NuxtLink></li>
           <li><NuxtLink href="/about-us">About Us</NuxtLink></li>
           <li><NuxtLink href="/blogs">Blog</NuxtLink></li>
-          <li><NuxtLink href="/blogs" class="btn transition-all duration-200">Join</NuxtLink></li>
+          <li><NuxtLink href="/contact-us" class="btn transition-all duration-200">Join</NuxtLink></li>
           <li>
             <a href="#">
             <span class="text-lg text-blue-950 flex items-center gap-1">
@@ -32,7 +32,7 @@
 </template>
 <script lang="ts" setup>
 import {useHeaderAnimation} from "~/hooks/useAnimation";
-const {enter, beforeEnter} = useHeaderAnimation()
+const {enter} = useHeaderAnimation()
 const itemsVisible = ref(false)
 onMounted(()=> setTimeout(() => itemsVisible.value = true, 100))
 </script>
