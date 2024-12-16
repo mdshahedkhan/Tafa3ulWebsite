@@ -1,9 +1,10 @@
 <script setup lang="ts">
-defineProps(['index', 'slide', 'width', 'height', 'gap'])
+const props = defineProps(['index', 'slide', 'width', 'height', 'gap'])
+const route = `/programs/${props.index}`;
 </script>
 
 <template>
-  <div :class="`${gap ? gap:'gap-12'} bg-no-repeat shadow-lg rounded-3xl my-6 flex justify-between`" :style="{background: `url('/imgs/backgrounds/02.jpg')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}">
+  <NuxtLink :href="route" :class="`${gap ? gap:'gap-12'} bg-no-repeat shadow-lg rounded-3xl my-6 flex justify-between`" :style="{background: `url('/imgs/backgrounds/02.jpg')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}">
     <img :src="`imgs/events/${slide.image}`" :class="`aspect-auto ${width} ${height} rounded-3xl object-fill bg-no-repeat`" :alt="slide.title">
     <div class="w-full py-7 flex flex-col justify-between">
       <div class="space-y-2">
@@ -16,7 +17,7 @@ defineProps(['index', 'slide', 'width', 'height', 'gap'])
         <p class="pr-16 inline-block font-cairo-regular text-gray-600" v-html="slide.authorDescribe" />
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped>
