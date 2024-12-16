@@ -1,6 +1,5 @@
 <template>
   <div class="overflow-hidden bg-[#fdfcfc]">
-    <Header/>
     <div class="h-screen space-y-7 bg-[#fdfcfc]" style="background: url('/imgs/hero-bg-frame.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
       <main class="main">
         <Wrapper class="py-14 space-y-16">
@@ -70,12 +69,9 @@
     <LatestArticle />
     <PhotoGallery />
     <FrequentlyQuestion />
-    <Footer />
   </div>
 </template>
 <script setup>
-// @ts-ignore
-import Header from "~/components/Header.vue";
 import Wrapper from "~/components/Wrapper.vue";
 import AboutSection from "~/components/AboutSection.vue";
 import {useHomeSectionAnimation} from "~/hooks/useAnimation";

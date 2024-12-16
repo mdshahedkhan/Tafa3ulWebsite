@@ -4,6 +4,5 @@
 
 <template>
 <div>
-  <p>Blog</p>
 </div>
 </template>

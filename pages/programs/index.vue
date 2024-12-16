@@ -30,7 +30,6 @@ const enterLeftSide = (element: Element): void => {
 
 <template>
   <div>
-    <Header/>
     <div id="hero-section" class="w-full bg-gradient-to-tr from-[#e6eb6e] to-[#ffffff] overflow-hidden">
       <div style="background: url('/imgs/backgrounds/03.png') no-repeat; background-size: contain" class="w-full h-[30vw] bg-no-repeat">
         <Wrapper>
@@ -71,7 +70,7 @@ const enterLeftSide = (element: Element): void => {
             <p class="text-primary font-pp-neue-machina italic">Our next workshop </p>
             <p class="font-pp-neue-machina-bold text-5xl">Skill Development Workshop </p>
             <p class="text-gray-500 font-pp-neue-machina">A good business plan guides you through each stage of starting and managing your business.</p>
-            <div>
+            <div class="space-y-2">
               <p class="text-xl"><span class="text-primary ti ti-clock-hour-5"></span><span class="pl-2 text-gray-600 font-medium">2:30 PM</span></p>
               <p class="text-xl"><span class="text-primary ti ti-calendar-month"></span><span class="pl-2 text-gray-600 font-medium">November, 06, 2024</span></p>
               <p class="text-xl"><span class="text-primary ti ti-map-2"></span><span class="pl-2 text-gray-600 font-medium">Iran National Auditorium, Iran</span></p>
@@ -84,7 +83,7 @@ const enterLeftSide = (element: Element): void => {
         </div>
       </Wrapper>
     </section>
-    <section id="events-section" class="py-24" style="background: url('/imgs/glows/01.png') no-repeat center center/cover;">
+    <section id="events-section" class="py-24" style="background: url('/imgs/glows/01.png') no-repeat top left;object-position: top; background-size: auto;">
       <Wrapper>
         <div class="w-1/2">
           <p class="heading-left-line inline-block text-sm text-primary italic">Hublive</p>
@@ -93,10 +92,10 @@ const enterLeftSide = (element: Element): void => {
             <p class="text-gray-500">Aiming to explore emerging fields and discussing their <br> potential future.</p>
           </div>
           <ul class="flex gap-4 mt-12">
-            <li><button class="font-pp-neue-machina active">All</button></li>
-            <li><button class="font-pp-neue-machina">Hakthon</button></li>
-            <li><button class="font-pp-neue-machina">Workshop</button></li>
-            <li><button class="font-pp-neue-machina">Hublive Session</button></li>
+            <li><button class="font-pp-neue-machina italic text-sm active">All</button></li>
+            <li><button class="font-pp-neue-machina italic text-sm">Hakthon</button></li>
+            <li><button class="font-pp-neue-machina italic text-sm">Workshop</button></li>
+            <li><button class="font-pp-neue-machina italic text-sm">Hublive Session</button></li>
           </ul>
         </div>
         <div class="grid grid-cols-2 gap-x-6 mt-14">
@@ -104,7 +103,6 @@ const enterLeftSide = (element: Element): void => {
         </div>
       </Wrapper>
     </section>
-    <Footer />
   </div>
 </template>
 <style scoped>
