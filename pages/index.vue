@@ -1,17 +1,16 @@
 <template>
   <div class="overflow-hidden bg-[#fdfcfc]">
-    <div class="h-screen space-y-7 bg-[#fdfcfc]" style="background: url('/imgs/hero-bg-frame.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    <div class="h-screen space-y-7 bg-[#fdfcfc]" style="background: url('/imgs/hero-bg-frame.png') no-repeat center center;background-size: cover;">
       <main class="main">
-        <Wrapper class="py-14 space-y-16">
+        <Wrapper class="pt-14 space-y-16">
           <Transition @enter="enter">
-            <p v-if="visibleElement" data-direction="left" class="text-7xl font-pp-neue-machina-bold py-6 capitalize">Unlock the <br> transformative
+            <p v-if="visibleElement" data-direction="left" class="md:text-5xl xl:text-7xl lg:text-7xl font-pp-neue-machina-bold py-6 capitalize">Unlock the <br> transformative
               <span class="italic pr-2 font-pp-neue-machina-bold heading-gradient-text-clip bg-gradient-to-r from-[#99ef3a] via-100% via-[#2BE29C] to-[#2BE29C] text-transparent bg-clip-text">power</span><br> of collaboration
             </p>
-            <p v-else class="h-60"></p>
           </Transition>
           <div class="flex justify-between">
             <Transition appear @enter="enterItems">
-              <div v-if="visibleElement" data-direction="left" data-duration="0.8" data-delay="1" class="w-1/2 flex gap-5 items-center">
+              <div v-show="visibleElement" data-direction="left" data-duration="0.8" data-delay="1" class="w-1/2 flex gap-5 items-center">
                 <div class="flex -space-x-4 rtl:space-x-reverse">
                   <img class="w-10 h-10 rounded-full" src="/imgs/avatars/avatar-1.png" alt="avatar">
                   <img class="w-10 h-10 rounded-full" src="/imgs/avatars/avatar-2.png" alt="avatar">
@@ -27,7 +26,7 @@
               </div>
             </Transition>
             <Transition @enter="enterLeftSideAnimation">
-              <div v-if="visibleElement" class="self-end place-items-end">
+              <div v-show="visibleElement" class="self-end place-items-end">
                 <div class="w-2/3 space-y-8">
                   <p>Join a thriving hub where like-minded individuals and organizations come together to create positive impact, share resources, and drive growth.</p>
                   <div class="space-x-6 flex items-center">
@@ -45,16 +44,23 @@
             </Transition>
           </div>
         </Wrapper>
-        <div class="pl-12">
+        <div class="pl-64 pt-[5vw]">
           <Transition @enter="enterHomeEvents">
-            <div v-if="visibleElement" class="flex justify-between pl-24">
-              <div class="w-96">
-                <img src="/imgs/curve-text.png" alt="curve-text" class="w-40 mx-auto">
+            <div v-show="visibleElement" class="flex justify-between">
+              <div class="w-[14vw] hidden xl:block lg:block relative">
+                <div class="circle relative w-[220px] h-[220px] bg-[#e1f685] rounded-full flex justify-center items-center">
+                  <div class="w-24 h-24 absolute top-1/2 left-1/2 -translate-y-1/2 rounded-full ring-2 ring-[#accf55] -translate-x-1/2 mx-auto">
+                    <img src="/imgs/icons/arrow-bottom.png" class="w-full scale-50 h-full" alt="curve-text">
+                  </div>
+                  <div class="text w-full h-full absolute">
+                    <p ref="circle-text">Tafa3ul hub Tafa3ul hub Tafa3ul hub Tafa3ul</p>
+                  </div>
+                </div>
               </div>
               <div class="flex gap-6">
-                <img src="/imgs/components/01.png" alt="curve-text" class="w-80"/>
-                <img src="/imgs/components/02.png" alt="curve-text" class="w-80"/>
-                <img src="/imgs/components/03.png" alt="curve-text" class="w-80"/>
+                <img src="/imgs/components/01.png" alt="curve-text" class="w-[14vw]"/>
+                <img src="/imgs/components/02.png" alt="curve-text" class="w-[14vw]"/>
+                <img src="/imgs/components/03.png" alt="curve-text" class="w-[14vw]"/>
               </div>
             </div>
           </Transition>
@@ -77,12 +83,17 @@ import AboutSection from "~/components/AboutSection.vue";
 import {useHomeSectionAnimation} from "~/hooks/useAnimation";
 import Achievement from "~/components/Achievement.vue";
 import PhotoGallery from "~/components/PhotoGallery.vue";
+import {onMounted, useTemplateRef} from "vue";
 const {enter, enterItems, enterCounter, enterLeftSideAnimation, enterHomeEvents} = useHomeSectionAnimation()
 const visibleElement = ref(false);
 const startCounting = ref(false);
+const textTemplateRef = useTemplateRef("circle-text");
 onMounted(()=> {
   setTimeout(()=> visibleElement.value = true, 1000)
   setTimeout(()=> startCounting.value = true, 1000)
+  if (textTemplateRef.value) {
+    textTemplateRef.value.innerHTML = textTemplateRef.value?.innerText?.split('').map((char, index) => (`<span style="transform: rotate(${index * 8.3}deg);">${char}</span>`)).join('')
+  }
 })
 useHead({
   title: "Home | Web Design",
@@ -91,6 +102,24 @@ useHead({
 
 </script>
 <style>
+.circle .text {
+  animation: textRotate 10s linear infinite;
+}
+
+@keyframes textRotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.circle .text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.5em;
+  transform-origin: 0 110px;
+}
 .heading-gradient-text-clip {
   position: relative;
 }

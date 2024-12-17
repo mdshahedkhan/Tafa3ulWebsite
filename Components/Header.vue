@@ -1,16 +1,21 @@
 <template>
   <Wrapper>
-    <div class="flex items-center justify-between w-full py-4">
-        <div class="h-16">
+    <div class="relative flex xl:flex-row lg:flex-row flex-col items-center gap-10 justify-between w-full py-4">
+        <div class="h-16 xl:w-auto lg:w-auto w-full">
           <Transition @enter="enter">
-            <div v-if="itemsVisible" class="flex gap-4 text-[18px] items-center">
-              <img src="/imgs/logo.png" alt="logo" class="w-16 h-16">
-              <p class="font-inter">Tafa3ul Hub</p>
+            <div v-show="itemsVisible" class="flex items-center justify-between">
+              <NuxtLink href="/" class="flex gap-4 text-[18px] items-center">
+                <img src="/imgs/logo.png" alt="logo" class="w-16 h-16">
+                <p class="font-inter">Tafa3ul Hub</p>
+              </NuxtLink>
+              <button id="menu-toggle" ref="menu-toggle" class="bg-gray-50 xl:hidden lg:hidden px-3 py-1.5 rounded-xl">
+                <span class="ti ti-menu-2 text-gray-900 text-2xl"></span>
+              </button>
             </div>
           </Transition>
         </div>
       <Transition @enter="enter">
-        <ul v-if="itemsVisible" class="flex navbar">
+        <ul v-if="itemsVisible" ref="navbar-menu" class="hidden absolute top-full z-[999] bg-white left-0 xl:static lg:static lg:flex xl:flex lg:flex-row xl:flex-row lg:w-auto xl:w-auto w-full flex-col navbar">
           <li><NuxtLink href="/">Home</NuxtLink></li>
           <li><NuxtLink href="/programs">Programs</NuxtLink></li>
           <li><NuxtLink href="/about-us">About Us</NuxtLink></li>
@@ -34,7 +39,21 @@
 import {useHeaderAnimation} from "~/hooks/useAnimation";
 const {enter} = useHeaderAnimation()
 const itemsVisible = ref(false)
-onMounted(()=> setTimeout(() => itemsVisible.value = true, 100))
+const menuToggleBtn = useTemplateRef('menu-toggle')
+const navbarMenu = useTemplateRef('navbar-menu')
+onMounted(()=> {
+  setTimeout(() => itemsVisible.value = true, 100)
+  if (menuToggleBtn.value) {
+    menuToggleBtn.value.addEventListener('click', e => {
+      navbarMenu.value?.classList.toggle('hidden')
+      menuToggleBtn.value?.classList.toggle('bg-red-100')
+      const menuToggleSpan = menuToggleBtn.value?.querySelector('span')
+      if (menuToggleSpan && menuToggleSpan.classList.contains('ti-menu-2')) {
+        menuToggleSpan.classList.toggle('ti-x')
+      }
+    })
+  }
+})
 </script>
 
 <style>
@@ -43,6 +62,8 @@ onMounted(()=> setTimeout(() => itemsVisible.value = true, 100))
   @apply py-1.5;
   @apply inline-block;
 }
+
+
 
 a.btn {
   @apply bg-gradient-to-r;

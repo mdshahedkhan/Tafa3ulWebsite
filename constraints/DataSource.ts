@@ -357,3 +357,60 @@ export const DummyTeamMembers = [
         image: "02.png"
     }
 ]
+
+export const DummyBlogs = [
+    {
+        category: "Communications",
+        published_at: "Mar 19, 2023",
+        title: "How to Gain More Media Coverage For Your Brand in 2024",
+        description: "This is coverage gained via paid advertising. You might pay for search engine",
+        authorName: "Robert Brown",
+        authorAvatar: "avatar-8.jpeg",
+        thumbnail: "01.jpeg"
+    },
+    {
+        category: "Communications",
+        published_at: "Mar 19, 2023",
+        title: "How to Gain More Media Coverage For Your Brand in 2024",
+        description: "This is coverage gained via paid advertising. You might pay for search engine",
+        authorName: "Robert Brown",
+        authorAvatar: "avatar-8.jpeg",
+        thumbnail: "02.png"
+    },
+    {
+        category: "Communications",
+        published_at: "Mar 19, 2023",
+        title: "How to Gain More Media Coverage For Your Brand in 2024",
+        description: "This is coverage gained via paid advertising. You might pay for search engine",
+        authorName: "Robert Brown",
+        authorAvatar: "avatar-8.jpeg",
+        thumbnail: "03.png"
+    },
+    {
+        category: "Communications",
+        published_at: "Mar 19, 2023",
+        title: "How to Gain More Media Coverage For Your Brand in 2024",
+        description: "This is coverage gained via paid advertising. You might pay for search engine",
+        authorName: "Robert Brown",
+        authorAvatar: "avatar-8.jpeg",
+        thumbnail: "01.jpeg"
+    },
+    {
+        category: "Communications",
+        published_at: "Mar 19, 2023",
+        title: "How to Gain More Media Coverage For Your Brand in 2024",
+        description: "This is coverage gained via paid advertising. You might pay for search engine",
+        authorName: "Robert Brown",
+        authorAvatar: "avatar-8.jpeg",
+        thumbnail: "02.png"
+    },
+    {
+        category: "Communications",
+        published_at: "Mar 19, 2023",
+        title: "How to Gain More Media Coverage For Your Brand in 2024",
+        description: "This is coverage gained via paid advertising. You might pay for search engine",
+        authorName: "Robert Brown",
+        authorAvatar: "avatar-8.jpeg",
+        thumbnail: "03.png"
+    },
+]

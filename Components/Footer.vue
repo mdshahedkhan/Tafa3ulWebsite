@@ -32,8 +32,9 @@
               <li class="font-cairo-regular"><NuxtLink href="/#">Portfolio</NuxtLink></li>
             </ul>
           </div>
-          <div class="col-span-2 text-end">
+          <div class="col-span-2 text-end space-y-3">
             <button class="bg-slate-900 hover:bg-slate-800 transition duration-300 px-4 py-2 rounded-full text-white font-cairo-regular">Request a call</button>
+            <p class="font-cairo-regular text-end text-gray-800 text-sm">Hub@tafa3ul.group</p>
           </div>
         </div>
         <div class="flex justify-between items-end">
