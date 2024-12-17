@@ -9,18 +9,18 @@
                 <p class="font-inter">Tafa3ul Hub</p>
               </NuxtLink>
               <button id="menu-toggle" ref="menu-toggle" class="bg-gray-50 xl:hidden lg:hidden px-3 py-1.5 rounded-xl">
-                <span class="ti ti-menu-2 text-gray-900 text-2xl"></span>
+                <span class="ti ti-menu-2 text-gray-900 text-xl"></span>
               </button>
             </div>
           </Transition>
         </div>
       <Transition @enter="enter">
         <ul v-if="itemsVisible" ref="navbar-menu" class="hidden absolute top-full z-[999] bg-white left-0 xl:static lg:static lg:flex xl:flex lg:flex-row xl:flex-row lg:w-auto xl:w-auto w-full flex-col navbar">
-          <li><NuxtLink href="/">Home</NuxtLink></li>
-          <li><NuxtLink href="/programs">Programs</NuxtLink></li>
-          <li><NuxtLink href="/about-us">About Us</NuxtLink></li>
-          <li><NuxtLink href="/blogs">Blog</NuxtLink></li>
-          <li><NuxtLink href="/contact-us" class="btn transition-all duration-200">Join</NuxtLink></li>
+          <li><NuxtLink class="text-sm lg:text-base xl:text-base" href="/">Home</NuxtLink></li>
+          <li><NuxtLink class="text-sm lg:text-base xl:text-base" href="/programs">Programs</NuxtLink></li>
+          <li><NuxtLink class="text-sm lg:text-base xl:text-base" href="/about-us">About Us</NuxtLink></li>
+          <li><NuxtLink class="text-sm lg:text-base xl:text-base" href="/blogs">Blog</NuxtLink></li>
+          <li><NuxtLink href="/contact-us" class="text-sm lg:text-base xl:text-base btn transition-all duration-200">Join</NuxtLink></li>
           <li>
             <a href="#">
             <span class="text-lg text-blue-950 flex items-center gap-1">
