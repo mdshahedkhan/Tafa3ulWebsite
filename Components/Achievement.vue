@@ -15,16 +15,16 @@ const handleChanged = (value: number)=> {
     <Wrapper>
       <div class="space-y-20">
         <div class="flex justify-between items-end gap-16">
-          <div class="w-1/3">
+          <div class="lg:w-1/3 xl:w-1/3 w-full">
             <p class="heading-left-line text-sm inline-block text-red-600">2023 Achievement</p>
-            <p class="text-5xl text-primary-gradient font-pp-neue-machina">What <span class="heading-underline font-pp-neue-machina-bold capitalize italic text-primary-gradient pr-2">we did</span>
-            </p>
+            <p class="lg:text-5xl xl:text-5xl md:text-4xl text-4xl text-primary-gradient font-pp-neue-machina">What <span class="heading-underline font-pp-neue-machina-bold capitalize italic text-primary-gradient pr-2">we did</span></p>
+            <p class="text-gray-600 mt-4">Discover how we drive innovation and create impactful solutions.</p>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 lg:block xl:block hidden">
             <div class="w-full bg-gradient-to-r from-[#FF665D] to-[#FD5437] h-[2px] inline-block"></div>
           </div>
         </div>
-        <div class="flex gap-16">
+        <div class="flex lg:flex-row xl:flex-row flex-col gap-16">
           <div class="w-1/3">
             <Stepper :items="stepperItems" @onChange="handleChanged"/>
           </div>

@@ -5,18 +5,18 @@ import {DummyTestimonials as Testimonials} from "~/constraints/DataSource";
 
 <template>
   <section id="testimonial" class="pb-16 pt-32">
-    <Wrapper class="grid !grid-cols-2 !gap-16">
-      <div class="flex flex-col gap-3">
+    <Wrapper class="grid xl:!grid-cols-2 lg:!grid-cols-2 !grid-cols-1 !gap-16">
+      <div class="flex flex-col gap-2">
         <div>
           <p class="heading-left-line text-sm !ml-14 inline-block italic text-[#FD5437]">Testimonial</p>
         </div>
-        <p class="text-4xl font-pp-neue-machina capitalize bg-gradient-to-r from-[#FFC081] to-[#FF5A00] bg-clip-text text-transparent inline-block">what our</p>
+        <p class="lg:text-4xl xl:text-4xl text-3xl font-pp-neue-machina capitalize bg-gradient-to-r from-[#FFC081] to-[#FF5A00] bg-clip-text text-transparent inline-block">what our</p>
         <div>
-          <p class="text-4xl font-pp-neue-machina-bold italic capitalize bg-gradient-to-r from-[#FFC081] to-[#FF5A00] bg-clip-text text-transparent inline-block heading-underline px-1">Participants say</p>
+          <p class="lg:text-4xl xl:text-4xl text-3xl font-pp-neue-machina-bold italic capitalize bg-gradient-to-r from-[#FFC081] to-[#FF5A00] bg-clip-text text-transparent inline-block heading-underline px-1">Participants say</p>
         </div>
-        <p class="text-gray-600 pr-40 text-lg">Read what our clients and partners have to say about their experiences with us.</p>
+        <p class="text-gray-600 lg:pr-40 xl:pr-40 pr-0 lg:text-lg xl:text-lg text-base lg:pt-0 xl:pt-0 pt-6">Read what our clients and partners have to say about their experiences with us.</p>
         <div class="space-y-9 mt-5 relative">
-          <div class="absolute top-0 left-0 bg-gradient-to-b from-transparent from-30%  to-white/80 to-90% w-full h-full"></div>
+          <div class="hidden lg:block xl:block absolute top-0 left-0 bg-gradient-to-b from-transparent from-30%  to-white/80 to-90% w-full h-full"></div>
           <EachTestimonial v-for="(testimonial, index) in Testimonials[0]" :key="`testimonial-item-${index}-left-side`" :activeIndex="0" :index="index" :testimonial="testimonial" />
         </div>
       </div>

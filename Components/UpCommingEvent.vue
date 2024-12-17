@@ -1,19 +1,19 @@
 <template>
-  <section id="event" class="py-16 bg-[#faf9f9] bg-center object-center w-full space-y-16" style="background: url('/imgs/glows/01.png'); background-repeat: no-repeat; background-position: top left">
+  <section id="event" class="lg:py-16 xl:py-16 py-4 bg-[#faf9f9] bg-center object-center w-full lg:space-y-16 xl:space-y-16 space-y-4" style="background: url('/imgs/glows/01.png') no-repeat top left;">
     <Wrapper>
       <div class="flex justify-between py-8 items-center">
         <div class="space-y-3">
           <p class="heading-left-line font-pp-neue-machina italic text-primary inline-block pl-20px">Our Programs</p>
-          <p class="text-5xl font-pp-neue-machina bg-gradient-to-r from-[#1e4360] to-[#122D40] pr-1 bg-clip-text text-transparent to-50% py-1">Upcoming <span class="font-pp-neue-machina-bold heading-underline bg-gradient-to-r from-[#1e4360] to-[#122D40] pr-1 bg-clip-text text-transparent to-50% italic">Events</span></p>
-          <p class="text-gray-600 text-lg">Aiming to explore emerging fields and <br> discussing their potential future.</p>
+          <p class="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-pp-neue-machina bg-gradient-to-r from-[#1e4360] to-[#122D40] pr-1 bg-clip-text text-transparent to-50% py-1">Upcoming <span class="font-pp-neue-machina-bold heading-underline bg-gradient-to-r from-[#1e4360] to-[#122D40] pr-1 bg-clip-text text-transparent to-50% italic">Events</span></p>
+          <p class="text-gray-600 text-sm md:text-base lg:text-lg xl:text-lg">Aiming to explore emerging fields and <br> discussing their potential future.</p>
         </div>
         <SliderNavigation @handleNavigation="handleNavigation"/>
       </div>
     </Wrapper>
-    <div class="py-7">
-      <Swiper :modules="modules" :autoplay="true" :loop="true" @slideChange="onSlideChange" @init="onInit" :slides-per-view="2" :slides-per-group="1" space-between="40">
+    <div class="lg:py-7 xl:py-7">
+      <Swiper :breakpoints="breakpoints" :modules="modules" :autoplay="true" :loop="true" @slideChange="onSlideChange" @init="onInit" :slides-per-view="2" :slides-per-group="1" space-between="40">
         <SwiperSlide v-for="(slide, index) in slides" :key="`event-slide-${index}`">
-          <EachEventCard :slide="slide"/>
+          <EachEventCard :slide="slide" :index="index"/>
         </SwiperSlide>
       </Swiper>
     </div>
@@ -42,12 +42,32 @@ const handleNavigation = (actionType)=> {
     swiperInstance.value && swiperInstance.value.slideTo(activeIndex.value)
   }
 }
-
+const breakpoints = {
+  // when window width is >= 640px
+  340: {
+    slidesPerView: 1,
+    spaceBetween: 20,
+  },
+  640: {
+    slidesPerView: 1,
+    spaceBetween: 20,
+  },
+  // when window width is >= 768px
+  768: {
+    slidesPerView: 2,
+    spaceBetween: 30,
+  },
+  // when window width is >= 1024px
+  1024: {
+    slidesPerView: 2,
+    spaceBetween: 40,
+  },
+}
 </script>
 
 <style scoped>
 #event p .heading-underline::after {
-  bottom: 4px;
+  bottom: -3px;
   background: #122D40;
 }
 </style>

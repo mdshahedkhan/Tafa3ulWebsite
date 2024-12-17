@@ -98,7 +98,11 @@
 }
 
 .swiper-wrapper .swiper-slide.swiper-slide-active {
-    @apply ml-60;
+    @apply xl:ml-56;
+    @apply lg:ml-56;
+    @apply xl:pl-0;
+    @apply lg:pl-0;
+    @apply px-8;
 }
 
 .text-primary-gradient {
