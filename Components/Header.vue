@@ -1,6 +1,6 @@
 <template>
-  <Wrapper>
-    <div class="relative flex xl:flex-row lg:flex-row flex-col items-center gap-10 justify-between w-full py-4">
+  <div class="wrapper">
+    <div class="contain-container relative flex xl:flex-row lg:flex-row flex-col items-center gap-10 justify-between w-full py-4">
         <div class="h-16 xl:w-auto lg:w-auto w-full">
           <Transition @enter="enter">
             <div v-show="itemsVisible" class="flex items-center justify-between">
@@ -33,7 +33,7 @@
         </ul>
       </Transition>
     </div>
-  </Wrapper>
+  </div>
 </template>
 <script lang="ts" setup>
 import {useHeaderAnimation} from "~/hooks/useAnimation";

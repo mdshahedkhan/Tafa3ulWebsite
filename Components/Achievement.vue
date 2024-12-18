@@ -12,8 +12,8 @@ const handleChanged = (value: number)=> {
 
 <template>
   <section id="achievement" class="pt-16 bg-[#faf9f9] bg-center object-center w-full space-y-16" style="background: url('/imgs/glows/02.png') no-repeat top left; object-fit: contain">
-    <Wrapper>
-      <div class="space-y-20">
+    <div class="wrapper">
+      <div class="contain-container space-y-20">
         <div class="flex justify-between items-end gap-16">
           <div class="lg:w-1/3 xl:w-1/3 w-full">
             <p class="heading-left-line text-sm inline-block text-red-600">2023 Achievement</p>
@@ -49,7 +49,7 @@ const handleChanged = (value: number)=> {
           </div>
         </div>
       </div>
-    </Wrapper>
+    </div>
   </section>
 </template>
 <style scoped>

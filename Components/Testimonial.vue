@@ -4,8 +4,8 @@ import {DummyTestimonials as Testimonials} from "~/constraints/DataSource";
 </script>
 
 <template>
-  <section id="testimonial" class="pb-16 pt-32">
-    <Wrapper class="grid xl:!grid-cols-2 lg:!grid-cols-2 !grid-cols-1 lg:!gap-16 xl:!gap-16 !gap-10">
+  <section id="testimonial" class="wrapper pb-16 pt-32">
+    <div class="contain-container grid xl:!grid-cols-2 lg:!grid-cols-2 !grid-cols-1 lg:!gap-16 xl:!gap-16 !gap-10">
       <div class="flex flex-col gap-2">
         <div>
           <p class="heading-left-line text-sm !ml-14 inline-block italic text-[#FD5437]">Testimonial</p>
@@ -23,7 +23,7 @@ import {DummyTestimonials as Testimonials} from "~/constraints/DataSource";
       <div class="space-y-9">
         <EachTestimonial v-for="(testimonial, index) in Testimonials[1]" :key="`testimonial-item-${index}-right-side`" :testimonial="testimonial" :activeIndex="false" :index="index"/>
       </div>
-    </Wrapper>
+    </div>
   </section>
 </template>
 <style scoped>

@@ -1,8 +1,8 @@
 <template>
   <div class="overflow-hidden bg-[#fdfcfc]">
     <div class="space-y-7 h-[800px] bg-[#fdfcfc]" style="background: url('/imgs/hero-bg-frame.png') no-repeat center center;background-size: cover;">
-      <main class="main cus-wrap">
-        <Wrapper class="flex lg:flex-row xl:flex-row flex-col pt-8 lg:pt-14 xl:pt-14 space-y-8 lg:space-y-16 xl:space-y-16">
+      <main class="main wrapper">
+        <div class="contain-container flex lg:flex-row xl:flex-row flex-col pt-8 lg:pt-14 xl:pt-14 space-y-8 lg:space-y-16 xl:space-y-16">
           <div class="w-full lg:w-1/2 xl:w-1/2">
             <Transition @enter="enter">
               <p v-if="visibleElement" data-direction="left" class="text-4xl lg:leading-[60px] xl:leading-[60px] md:leading-[60px] leading-[45px] md:text-[64px] xl:text-6xl lg:text-[64px] font-pp-neue-machina-bold capitalize">Unlock the <br> transformative
@@ -45,7 +45,7 @@
               </div>
             </Transition>
           </div>
-        </Wrapper>
+        </div>
         <div class="lg:mb-[-7%] xl:mb-[-7%] md:mb-[-8%] xl:block lg:block lg:pl-64 xl:pl-64 mt-5 lg:pt-[3vw] xl:pt-[3vw]">
           <div  class="wrapper flex justify-between">
             <div class="w-[14vw] hidden xl:block lg:block relative">

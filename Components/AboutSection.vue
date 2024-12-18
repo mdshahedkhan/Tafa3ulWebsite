@@ -4,8 +4,8 @@ import Wrapper from "~/components/Wrapper.vue";
 
 <template>
   <section id="partners" class="pt-24 lg:pt-52 xl:pt-52 pb-24 bg-[#fdfcfc]">
-    <Wrapper>
-      <div class="space-y-16">
+    <div class="wrapper">
+      <div class="contain-container space-y-16">
         <div class="space-y-4">
           <p class="text-4xl capitalize text-center">Our <span class="font-pp-neue-machina-bold italic text-red-500 partner-text">partners</span></p>
           <p class="text-sm lg:text-base xl:text-base text-center text-gray-500 font-cairo-regular">Explore potential partnership opportunities with us.</p>
@@ -62,6 +62,6 @@ import Wrapper from "~/components/Wrapper.vue";
           </div>
         </div>
       </div>
-    </Wrapper>
+    </div>
   </section>
 </template>

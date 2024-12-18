@@ -4,8 +4,8 @@ import {DummyFrequentlyQuestions} from "~/constraints/DataSource";
 
 <template>
   <div id="frequently-question" class="w-full" style="background: url('/imgs/glows/01.png') no-repeat; background-size: contain;">
-    <Wrapper>
-      <div class="flex xl:flex-row lg:flex-row flex-col gap-16 pt-16 pb-20">
+    <div class="wrapper">
+      <div class="contain-container flex xl:flex-row lg:flex-row flex-col gap-16 pt-16 pb-20">
         <div class="w-full lg:w-1/2 x:w-1/2 lg:pr-16 xl:pr-16 space-y-4">
           <div class="pl-3">
             <p class="heading-left-line inline-block italic text-[#003AE6]">Asked Question</p>
@@ -20,7 +20,7 @@ import {DummyFrequentlyQuestions} from "~/constraints/DataSource";
           <FrequentlyEachQeustion v-for="(question, index) in DummyFrequentlyQuestions" ring-color="ring-gray-500" :option="question" :key="`frequently-each-question-${index}`" />
         </div>
       </div>
-    </Wrapper>
+    </div>
   </div>
 </template>
 <style scoped>

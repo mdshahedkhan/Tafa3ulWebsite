@@ -4,8 +4,8 @@
 
 <template>
   <footer class="pt-16" style="background-image: url('/imgs/backgrounds/footer.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-    <Wrapper class="space-y-12">
-      <div class="w-full bg-white py-10 px-8 rounded-lg space-y-10">
+    <div class="wrapper space-y-12">
+      <div class="contain-container w-full bg-white py-10 px-8 rounded-lg space-y-10">
         <div class="lg:grid xl:grid lg:!grid-cols-6 xl:!grid-cols-6 gap-8">
           <div class="col-span-2">
             <div class="flex gap-4 text-[18px] items-center">
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="w-full flex lg:flex-row xl:flex-row flex-col gap-10 justify-between items-center">
+      <div class="contain-container w-full flex lg:flex-row xl:flex-row flex-col gap-10 justify-between items-center">
         <div class="lg:w-1/2 xl:w-1/2 w-full">
           <p class="lg:text-3xl xl:text-3xl text-xl text-white font-pp-neue-machina-bold">If you didn't find the event you are interested in or have questions about it,</p>
         </div>
@@ -67,11 +67,11 @@
           </button>
         </div>
       </div>
-      <div class="flex justify-between items-center pb-8">
+      <div class="contain-container flex justify-between items-center pb-8">
         <p class="text-white text-xs">© 2025 — Copyright</p>
         <NuxtLink href="#" class="text-white text-xs">Privacy</NuxtLink>
       </div>
-    </Wrapper>
+    </div>
   </footer>
 </template>
 <style scoped>
