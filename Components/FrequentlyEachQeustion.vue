@@ -1,15 +1,15 @@
 <template>
-  <div :class="`rounded-xl shadow-sm ${isExpend ? ringColor:'ring-gray-200'}`">
+  <div :class="`rounded-xl shadow-sm ${isExpend ? ringColor:'ring-gray-200'} ring-1`">
     <div class="w-full h-full py-6 px-6 space-y-4 bg-white overflow-hidden rounded-xl">
       <div class="flex items-center justify-between">
-        <p :class="`text-xl ${isExpend ? 'font-pp-neue-machina-bold':'font-pp-neue-machina'} `">{{ option.title }}</p>
+        <p :class="`lg:text-xl xl:text-xl md:text-base text-sm font-pp-neue-machina-bold`">{{ option?.title }}</p>
         <button :class="`${isExpend ? backgroundColor:'hover:bg-gray-100'} transition duration-300 px-2.5 py-1.5 rounded-full group`" @click="handleExpend">
-          <span :class="`${isExpend ? activeColor + '-rotate-180':color} ti ti-chevron-up group-active:-rotate-180 duration-300 transition inline-block`"></span>
+          <span :class="`${isExpend ? activeColor + ' -rotate-180 ':color} ti ti-chevron-up group-active:-rotate-180 duration-300 transition inline-block`"></span>
         </button>
       </div>
       <Transition @enter="enter" @leave="leave">
         <div v-if="isExpend">
-          <p class="text-[#161C28] font-cairo-regular">{{ option.body }}</p>
+          <p class="text-[#161C28] font-cairo-regular lg:text-base xl:text-base md:text-base text-sm">{{ option?.body }}</p>
         </div>
       </Transition>
     </div>
@@ -22,7 +22,7 @@ const isExpend = ref(false);
 const handleExpend = ()=> isExpend.value = !isExpend.value
 defineProps({
   option: {
-    type: Object as () => Object,
+    type: Object,
   },
   color: {
     type: String,
@@ -38,7 +38,7 @@ defineProps({
   },
   ringColor: {
     type: String,
-    default: 'ring-[#F04635] ring-2 px-[1.5px] py-[2px]'
+    default: 'ring-[#F04635] px-[1.5px] py-[2px]'
   }
 })
 const enter = (element, done)=> {

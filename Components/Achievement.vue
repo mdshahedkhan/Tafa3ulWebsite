@@ -32,14 +32,14 @@ const handleChanged = (value: number)=> {
             <p class="text-gray-600 font-cairo-regular leading-[24px] capitalize">The workshops provided participants with the necessary tools,
               guidance, and inspiration to explore their interests, identify their true callings, and embark on fulfilling
               journeys in their chosen fields and industries.</p>
-            <div class="flex gap-5">
-              <div class="w-96 h-full">
+            <div class="grid lg:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-5">
+              <div class="h-full">
                 <img src="/imgs/achievements/02.png" alt="achievements" class="w-full object-contain">
               </div>
-              <div class="w-96 h-full">
+              <div class="h-full">
                 <img src="/imgs/achievements/04.png" alt="achievements" class="w-full object-contain">
               </div>
-              <div class="space-y-5 w-1/2">
+              <div class="h-full space-y-5">
                 <img src="/imgs/achievements/01.png" alt="achievements" class="object-contain">
                 <div>
                   <img src="/imgs/achievements/03.png" alt="achievements" class="w-full">

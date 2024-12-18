@@ -10,9 +10,9 @@
         <SliderNavigation @handleNavigation="handleNavigation"/>
       </div>
     </Wrapper>
-    <div class="lg:py-7 xl:py-7">
-      <Swiper :breakpoints="breakpoints" :modules="modules" :autoplay="true" :loop="true" @slideChange="onSlideChange" @init="onInit" :slides-per-view="2" :slides-per-group="1" space-between="40">
-        <SwiperSlide v-for="(slide, index) in slides" :key="`event-slide-${index}`">
+    <div class="lg:py-7 xl:py-7 up-coming-event-container">
+      <Swiper :breakpoints="breakpoints" :modules="modules" :autoplay="false" :loop="true" @slideChange="onSlideChange" @init="onInit" :slides-per-view="2" :slides-per-group="1">
+        <SwiperSlide v-for="(slide, index) in slides" class="w-1/2 " :key="`event-slide-${index}`">
           <EachEventCard :slide="slide" :index="index"/>
         </SwiperSlide>
       </Swiper>
@@ -46,15 +46,15 @@ const breakpoints = {
   // when window width is >= 640px
   340: {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 0,
   },
   640: {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 0,
   },
   // when window width is >= 768px
   768: {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
   },
   // when window width is >= 1024px

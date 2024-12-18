@@ -60,8 +60,8 @@
     @apply rounded-full;
 }
 
-.button.btn-box-shadow {
-    box-shadow: 0 0 15px 1px rgba(253, 84, 55, 0.71);
+.btn-box-shadow:hover {
+    box-shadow: 0 4px 50px 0 #FF665DCC;
 }
 
 .heading-underline {
@@ -97,13 +97,14 @@
     background: linear-gradient(to right, #FF665D, #FD5437);
 }
 
-.swiper-wrapper .swiper-slide.swiper-slide-active {
+/*.swiper-wrapper .swiper-slide.swiper-slide-active {
     @apply xl:ml-56;
     @apply lg:ml-56;
     @apply xl:pl-0;
     @apply lg:pl-0;
     @apply px-8;
-}
+}*/
+
 
 .text-primary-gradient {
     @apply text-transparent;
@@ -111,4 +112,112 @@
     @apply from-[#FF665D];
     @apply to-[#FD5437];
     @apply bg-clip-text;
+}
+
+.wrapper {
+    max-width: 1920px;
+    @apply mx-auto;
+}
+
+.contain-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#explore-podcast .swiper-wrapper .swiper-slide.swiper-slide-active {
+    margin-left: 14.5%;
+}
+
+#event .swiper-wrapper .swiper-slide.swiper-slide-active {
+    margin-left: 16%;
+}
+
+@media (max-width: 1340px) {
+    .contain-container {
+        width: 80%;
+    }
+
+    #explore-podcast .swiper-wrapper .swiper-slide.swiper-slide-active {
+        margin-left: 15%;
+    }
+}
+
+/*@media (max-width: 1336px) {
+
+    #event .swiper-wrapper .swiper-slide.swiper-slide-active {
+        width: 80%;
+        margin: 0 auto;
+    }
+}*/
+@media (max-width: 1024px) {
+    .contain-container {
+        width: 85%;
+    }
+
+    #explore-podcast .swiper-wrapper .swiper-slide.swiper-slide-active {
+        margin-left: 2.5%;
+    }
+
+    #explore-podcast .slide-container {
+        width: 82%;
+        margin: 0 auto;
+    }
+
+    #event .swiper-wrapper .swiper-slide.swiper-slide-active {
+        margin-left: 0;
+    }
+
+    #event .up-coming-event-container {
+        width: 76%;
+        margin: 0 auto;
+    }
+
+    #latest-article .contain-container {
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .contain-container {
+        width: 88%;
+    }
+
+    #explore-podcast .swiper-wrapper .swiper-slide.swiper-slide-active {
+        margin-left: 0;
+    }
+
+    #explore-podcast .slide-container {
+        width: 88%;
+        margin: 0 auto;
+    }
+
+
+    #event .up-coming-event-container {
+        width: 78%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .contain-container {
+        width: 95%;
+    }
+
+
+    #explore-podcast .swiper-wrapper .swiper-slide.swiper-slide-active {
+        margin-left: 0;
+    }
+
+
+    #event .up-coming-event-container {
+        width: 82%;
+        margin: 0 auto;
+    }
+}
+
+.cus-hero-bottom-part {
+    @apply mx-auto;
+    margin-bottom: -7%;
 }

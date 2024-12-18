@@ -79,6 +79,7 @@ export const useHomeSectionAnimation = function () {
                 opacity: 0,
                 stagger: 0.1
             })
+            done()
         },
         enterItems: function (element: any, done: () => void) {
             const dataset = element.dataset

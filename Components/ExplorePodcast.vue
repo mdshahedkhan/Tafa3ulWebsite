@@ -1,8 +1,8 @@
 <template>
-  <section class="bg-no-repeat py-28 w-full bg-cover space-y-10" style="background-image: url('/imgs/backgrounds/01.jpg')">
+  <section id="explore-podcast" class="bg-no-repeat py-28 w-full bg-cover space-y-10" style="background-image: url('/imgs/backgrounds/01.jpg')">
     <Wrapper>
       <div>
-        <p class="lg:text-4xl xl:text-4xl text-3xl text-white font-pp-neue-machina">Explore Our <span class="px-1 heading-underline font-pp-neue-machina bg-gradient-to-r from-[#a7df77] to-[#67d380] bg-clip-text text-transparent font-pp-neue-machina-bold italic">Podcast</span></p>
+        <p class="lg:text-4xl xl:text-4xl md:text-3xl text-2xl text-white font-pp-neue-machina">Explore Our <span class="px-1 heading-underline font-pp-neue-machina bg-gradient-to-r from-[#a7df77] to-[#67d380] bg-clip-text text-transparent font-pp-neue-machina-bold italic">Podcast</span></p>
         <div class="flex justify-between items-center">
           <div class="py-4">
             <p class="lg:text-base xl:text-base text-sm text-white font-cairo-regular leading-[24px]">Tafa3ul Hub Workshops are carefully crafted to provide participants with the  necessary tools,
@@ -19,12 +19,12 @@
         </div>
       </div>
     </Wrapper>
-    <div class="space-y-10 lg:pt-12 xl:pt-12 pt-4">
-      <Swiper @slideChange="onSlideChange" @init="onInit" :modules="modules" :slides-per-view="3" :breakpoints="breakpoints" :slides-per-group="1" loop :space-between="30">
+    <div class="slide-container ml-auto lg:px-0 xl:px-0">
+      <Swiper @slideChange="onSlideChange" @init="onInit" :modules="modules" :slides-per-view="3" :breakpoints="breakpoints" :slides-per-group="1" loop :space-between="5">
         <SwiperSlide v-for="slide in slides" :key="`slide-${slide}`">
-          <div class="py-2 px-2 space-y-6 cursor-pointer">
-            <div class="rounded-2xl relative ring-2 ring-[#FF665D] overflow-hidden">
-              <img :src="`/imgs/slides/${slide.image}`" alt="slide" class="w-full h-80 bg-cover object-cover">
+          <div class="py-2 lg:px-8 xl:px-8 space-y-6 cursor-pointer lg:mx-0 xl:mx-0 mx-6">
+            <div class="rounded-2xl relative ring-2 ring-[#FF665D]">
+              <img :src="`/imgs/slides/${slide.image}`" alt="slide" class="w-full lg:h-80 xl:h-80 md:h-96 h-52 bg-cover rounded-2xl object-cover">
               <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ring-2 rounded-full bg-transparent hover:bg-[#FF665D90] group transition duration-300 ring-[#FF665D] px-2 py-2 flex items-center">
                   <span class="bg-red-500 group-hover:bg-[#FF665D90] duration-300 transition inline-block px-3 py-2.5 rounded-full">
                     <IconPlayerPlayFilled class="text-4xl text-white" color="#fff"/>
@@ -38,7 +38,7 @@
           </div>
         </SwiperSlide>
       </Swiper>
-      <div class="flex justify-center items-center w-full gap-1">
+      <div class="flex justify-center items-center w-full gap-1 pt-14">
         <span v-for="(_slide, index) in slides" :key="`slide-dot-${index}`" @click="()=> goSlide(index)" :class="[index === activeIndex ? 'w-[32px] bg-[#2BE29C]':'w-[14px] bg-[#424A6F]','h-[8px]  rounded-full inline-block']"></span>
       </div>
     </div>
@@ -82,13 +82,13 @@ const breakpoints = {
   },
   // when window width is >= 768px
   768: {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
   },
   // when window width is >= 1024px
   1024: {
     slidesPerView: 3,
-    spaceBetween: 40,
+    spaceBetween: 0,
   },
 }
 </script>
