@@ -55,13 +55,19 @@
     @apply bg-gradient-to-r;
     @apply from-[#FF665D];
     @apply to-[#FD5437];
-    @apply px-8;
+    @apply xl:px-6;
+    @apply lg:px-6;
     @apply py-2;
     @apply rounded-full;
 }
 
+.btn-box-shadow {
+    @apply transition;
+    @apply duration-300;
+}
+
 .btn-box-shadow:hover {
-    box-shadow: 0 4px 50px 0 #FF665DCC;
+    box-shadow: 0 4px 15px 0 #FF665DCC;
 }
 
 .heading-underline {
@@ -120,16 +126,16 @@
 }
 
 .contain-container {
-    width: 75%;
+    width: 66%;
     @apply mx-auto;
 }
 
 #explore-podcast .swiper-wrapper .swiper-slide.swiper-slide-active {
-    margin-left: 11%;
+    margin-left: 15.5%;
 }
 
 #event .swiper-wrapper .swiper-slide.swiper-slide-active {
-    margin-left: 12.5%;
+    margin-left: 17%;
 }
 
 @media (max-width: 1340px) {
@@ -139,6 +145,11 @@
 
     #explore-podcast .swiper-wrapper .swiper-slide.swiper-slide-active {
         margin-left: 7.5%;
+    }
+
+
+    #event .swiper-wrapper .swiper-slide.swiper-slide-active {
+        margin-left: 10%;
     }
 }
 
@@ -161,7 +172,7 @@
     }
 
     #event .up-coming-event-container {
-        width: 76%;
+        width: 85%;
         margin: 0 auto;
     }
 
@@ -188,7 +199,7 @@
 
 
     #event .up-coming-event-container {
-        width: 78%;
+        width: 87.5%;
         margin: 0 auto;
     }
 }
@@ -205,7 +216,7 @@
 
 
     #event .up-coming-event-container {
-        width: 82%;
+        width: 90%;
         margin: 0 auto;
     }
 }

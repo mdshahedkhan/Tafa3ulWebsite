@@ -6,42 +6,42 @@ useHead({
 
 <template>
   <main>
-    <section id="page-contact-us">
-      <Wrapper>
-        <div class="py-20 h-[25vw] background-image rounded-2xl flex flex-col justify-end px-16 relative">
+    <section id="page-contact-us" class="wrapper">
+      <div class="contain-container">
+        <div class="xl:py-20 lg:py-20 md:py-14 py-8 h-52 xl:h-80 lg:h-80 background-image rounded-2xl flex flex-col justify-end xl:px-16 lg:px-16 md:px-12 px-8 relative">
           <div class="bg-gradient-to-b rounded-2xl from-transparent to-blue-900 absolute top-0 left-0 h-full w-full"></div>
-          <p class="z-10 text-transparent stroke-white text-9xl w-full font-pp-neue-machina-bold text-stroke">Contact Us</p>
-          <p class="z-10 text-white font-pp-neue-machina-bold text-6xl w-full">Contact Us</p>
+          <p class="z-10 text-transparent stroke-white xl:text-9xl lg:text-9xl md:text-7xl text-5xl w-full font-pp-neue-machina-bold text-stroke">Contact Us</p>
+          <p class="z-10 text-white font-pp-neue-machina-bold xl:text-6xl lg:text-6xl md:text-4xl text-3xl w-full">Contact Us</p>
         </div>
-      </Wrapper>
+      </div>
       <div class="w-full" style="background-image: url('/imgs/glows/01.png'); background-repeat: no-repeat;">
-        <Wrapper class="py-24 flex gap-16 justify-between">
-          <div class="w-1/2 space-y-12">
+        <div class="contain-container py-24 flex xl:flex-row lg:flex-row flex-col gap-16 justify-between">
+          <div class="xl:w-1/2 lg:w-1/2 w-full space-y-12">
             <div>
               <p class="heading-left-line inline-block pl-3 text-primary italic">Contact Us</p>
-              <p class="text-6xl font-pp-neue-machina from-[#122D40] to-[#122D40] bg-gradient-to-r text-transparent bg-clip-text">Get In <span class="font-pp-neue-machina-bold italic from-[#4A84B5] to-[#122D40] bg-gradient-to-r text-transparent pr-1 bg-clip-text heading-underline">Touch</span></p>
-              <p class="text-lg text-gray-500 mt-6">We’d love to hear from you. Please fill out this form.</p>
+              <p class="xl:text-6xl lg:text-6xl md:text-4xl text-4xl font-pp-neue-machina from-[#122D40] to-[#122D40] bg-gradient-to-r text-transparent bg-clip-text">Get In <span class="font-pp-neue-machina-bold italic from-[#4A84B5] to-[#122D40] bg-gradient-to-r text-transparent pr-1 bg-clip-text heading-underline">Touch</span></p>
+              <p class="xl:text-lg lg:text-lg text-sm text-gray-500 mt-6">We’d love to hear from you. Please fill out this form.</p>
             </div>
             <div class="space-y-6">
               <div class="flex gap-8">
                 <div class="w-1/2">
-                  <p class="text-2xl font-pp-neue-machina">Contact</p>
+                  <p class="xl:text-2xl lg:text-2xl text-xl font-pp-neue-machina">Contact</p>
                   <p>843 412 612 20</p>
                   <p>+(125) 356 861</p>
                 </div>
                 <div class="w-1/2">
-                  <p class="text-2xl font-pp-neue-machina">Based in</p>
+                  <p class="xl:text-2xl lg:text-2xl text-xl font-pp-neue-machina">Based in</p>
                   <p>New York,</p>
                   <p>California, Ohio</p>
                 </div>
               </div>
               <div class="flex gap-8">
                 <div class="w-1/2">
-                  <p class="text-2xl font-pp-neue-machina">Email</p>
+                  <p class="xl:text-2xl lg:text-2xl text-xl font-pp-neue-machina">Email</p>
                   <p>843 412</p>
                 </div>
                 <div class="w-1/2">
-                  <p class="text-2xl font-pp-neue-machina">Social Network</p>
+                  <p class="xl:text-2xl lg:text-2xl text-base font-pp-neue-machina">Social Network</p>
                   <ul class="flex gap-4">
                     <li><span class="ti ti-brand-x"></span></li>
                     <li><span class="ti ti-brand-facebook"></span></li>
@@ -52,9 +52,9 @@ useHead({
               </div>
             </div>
           </div>
-          <div class="w-1/2 pl-24">
-            <div class="bg-[#ddf1e2] rounded-2xl py-14 ml-auto px-12 space-y-8">
-              <p class="font-pp-neue-machina text-3xl">Get In <span class="italic heading-underline font-pp-neue-machina-bold">Touch</span></p>
+          <div class="xl:w-1/2 lg:w-1/2 w-full lg:pl-24 xl:pl-24 pl-0">
+            <div class="bg-[#ddf1e2] rounded-2xl xl:py-14 lg:py-14 md:py-12 py-8 ml-auto xl:px-12 lg:px-12 md:px-9 px-7 space-y-8">
+              <p class="font-pp-neue-machina xl:text-3xl lg:text-3xl text-2xl">Get In <span class="italic heading-underline font-pp-neue-machina-bold">Touch</span></p>
               <div class="space-y-6">
                 <div>
                   <label for="first_name" class="text-gray-700 font-pp-neue-machina block text-sm">First Name</label>
@@ -74,20 +74,20 @@ useHead({
                 </div>
                 <div class="w-full flex gap-4">
                   <input type="checkbox" name="agree_policy" id="agree_policy">
-                  <p>You agree to our friendly <NuxtLink>privacy policy.</NuxtLink></p>
+                  <p class="xl:text-base lg:text-base text-sm">You agree to our friendly <NuxtLink>privacy policy.</NuxtLink></p>
                 </div>
                 <div class="pt-5">
-                  <button class="bg-slate-900 hover:bg-slate-800 transition duration-300 py-3.5 rounded-full text-white font-pp-neue-machina w-full">SEND A MESSAGE</button>
+                  <button class="bg-slate-900 hover:bg-slate-800 transition duration-300 py-3.5 rounded-full text-white xl:text-base lg:text-base text-sm font-pp-neue-machina w-full">SEND A MESSAGE</button>
                 </div>
               </div>
             </div>
           </div>
-        </Wrapper>
-        <Wrapper class="pb-24">
+        </div>
+        <div class="contain-container pb-24">
           <div class="relative">
-            <div class="bg-white px-6 py-5 absolute top-2 left-2 rounded-xl w-[23vw] space-y-3">
+            <div class="bg-white px-6 py-5 absolute top-2 left-2 rounded-xl xl:w-[460px] lg:w-[460px] w-[320px] space-y-3">
               <div class="pr-6">
-                <p class="font-pp-neue-machina-bold">Warsaw, Abbeyville (Tincup), 46582</p>
+                <p class="font-pp-neue-machina-bold xl:text-base lg:text-base text-sm">Warsaw, Abbeyville (Tincup), 46582</p>
                 <p class="font-pp-neue-machina text-sm">We'd love to hear from you. Please fill out this from.</p>
               </div>
               <div class="border-b-[1.5px] border-gray-300 pb-2">
@@ -99,9 +99,9 @@ useHead({
               </div>
               <NuxtLink class="text-gray-500 cursor-pointer">view large map</NuxtLink>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889" class="w-full h-[25vw] rounded-3xl" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889" class="w-full lg:h-96 xl:h-96 h-72 rounded-3xl" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
-        </Wrapper>
+        </div>
       </div>
     </section>
   </main>
@@ -111,29 +111,15 @@ useHead({
   background-image: url('/imgs/contact-us-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -100px;
 }
 
 #page-contact-us .heading-underline::after {
   background: #122D40;
+  bottom: -3px;
 }
 
 #page-contact-us .text-stroke {
   -webkit-text-stroke: 1px white;
   opacity: 0.4;
 }
-
-/*.responsive-map{
-  overflow: hidden;
-  position:relative;
-  height:0;
-}
-.responsive-map iframe{
-  left:0;
-  top:0;
-  height:70%;
-  width:100%;
-  position:absolute;
-}*/
-
 </style>

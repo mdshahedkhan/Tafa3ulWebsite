@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script setup >
+<script setup>
 import {SwiperSlide, Swiper} from "swiper/vue";
 import {Autoplay} from "swiper/modules"
 import {EventsDummySlides as slides} from "~/constraints/DataSource.ts";
