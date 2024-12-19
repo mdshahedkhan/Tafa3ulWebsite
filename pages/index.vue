@@ -1,6 +1,6 @@
 <template>
-  <div class="overflow-hidden bg-[#fdfcfc]">
-    <div class="space-y-7 h-[800px] bg-[#fdfcfc]" style="background: url('/imgs/hero-bg-frame.png') no-repeat center center;background-size: cover;">
+  <div class=" bg-[#fdfcfc]">
+    <div class="space-y-7 lg:h-[800px] xl:h-[800px] md:h-[700px] h-[700px] bg-[#fdfcfc]" style="background: url('/imgs/hero-bg-frame.png') no-repeat center center;background-size: cover;">
       <main class="wrapper">
         <div class="contain-container">
           <div class="flex lg:flex-row xl:flex-row flex-col pt-8 lg:pt-14 xl:pt-14 space-y-8 lg:space-y-16 xl:space-y-16">
@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="wrapper relative mt-16">
+        <div class="wrapper relative lg:mt-16 xl:mt-16 md:mt-12 mt-8">
           <div  class="contain-container flex justify-between">
             <div class="w-48 hidden xl:block lg:block relative">
               <div class="circle relative w-[157px] h-[157px] bg-[#e1f685] rounded-full flex justify-center items-center">
@@ -59,10 +59,10 @@
               </div>
             </div>
           </div>
-          <div class="absolute top-0 right-0 overflow-x-auto gap-6 w-full flex justify-end">
-            <img  src="/imgs/components/02.png" class="lg:w-72 xl:w-72 md:w-64 w-56 rounded-xl" alt="component"/>
-            <img  src="/imgs/components/01.png" class="lg:w-72 xl:w-72 md:w-64 w-56 rounded-xl" alt="component"/>
-            <img  src="/imgs/components/03.png" class="lg:w-72 xl:w-72 md:w-64 w-56 rounded-xl" alt="component"/>
+          <div class="absolute top-0 right-0 overflow-x-auto xl:gap-6 lg:gap-6 md:gap-4 gap-3 w-full flex justify-end">
+            <img  src="/imgs/components/02.png" class="hero-slide-image rounded-xl" alt="component"/>
+            <img  src="/imgs/components/01.png" class="hero-slide-image rounded-xl" alt="component"/>
+            <img  src="/imgs/components/03.png" class="hero-slide-image rounded-xl" alt="component"/>
           </div>
         </div>
       </main>
@@ -90,7 +90,7 @@ const textTemplateRef = useTemplateRef("circle-text");
 onMounted(()=> {
   setTimeout(()=> visibleElement.value = true, 1000)
   setTimeout(()=> startCounting.value = true, 1000)
-  if (textTemplateRef.value) {
+  if (textTemplateRef?.value) {
     textTemplateRef.value.innerHTML = textTemplateRef.value?.innerText?.split('').map((char, index) => (`<span style="transform: rotate(${index * 8.3}deg);">${char}</span>`)).join('')
   }
 })

@@ -25,25 +25,23 @@ const handleChanged = (value: number)=> {
           </div>
         </div>
         <div class="flex lg:flex-row xl:flex-row flex-col gap-16">
-          <div class="w-1/3">
+          <div class="xl:w-1/3 lg:w-1/3 w-full">
             <Stepper :items="stepperItems" @onChange="handleChanged"/>
           </div>
           <div class="flex-1 space-y-10">
             <p class="text-gray-600 font-cairo-regular leading-[24px] capitalize">The workshops provided participants with the necessary tools,
               guidance, and inspiration to explore their interests, identify their true callings, and embark on fulfilling
               journeys in their chosen fields and industries.</p>
-            <div class="grid lg:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-5">
+            <div class="grid lg:!grid-cols-3 xl:!grid-cols-3 !grid-cols-2 gap-5">
               <div class="h-full">
-                <img src="/imgs/achievements/02.png" alt="achievements" class="w-full object-contain">
+                <img src="/imgs/achievements/02.png" alt="achievements" class="w-48 object-contain">
               </div>
               <div class="h-full">
-                <img src="/imgs/achievements/04.png" alt="achievements" class="w-full object-contain">
+                <img src="/imgs/achievements/04.png" alt="achievements" class="w-48 object-contain">
               </div>
-              <div class="h-full space-y-5">
-                <img src="/imgs/achievements/01.png" alt="achievements" class="object-contain">
-                <div>
-                  <img src="/imgs/achievements/03.png" alt="achievements" class="w-full">
-                </div>
+              <div class="h-full xl:space-y-5 lg:space-y-5 space-y-0 !col-span-2">
+                <img src="/imgs/achievements/01.png" alt="achievements" class="object-contain h-52">
+                <img src="/imgs/achievements/03.png" alt="achievements" class="w-full h-48">
               </div>
             </div>
           </div>

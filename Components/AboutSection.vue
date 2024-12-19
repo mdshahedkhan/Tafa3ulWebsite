@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import Wrapper from "~/components/Wrapper.vue";
-</script>
-
 <template>
   <section id="partners" class="pt-24 lg:pt-52 xl:pt-52 pb-24 bg-[#fdfcfc]">
     <div class="wrapper">
@@ -10,18 +6,24 @@ import Wrapper from "~/components/Wrapper.vue";
           <p class="text-4xl capitalize text-center">Our <span class="font-pp-neue-machina-bold italic text-red-500 partner-text">partners</span></p>
           <p class="text-sm lg:text-base xl:text-base text-center text-gray-500 font-cairo-regular">Explore potential partnership opportunities with us.</p>
         </div>
-        <div class="grid lg:!grid-cols-3 xl:!grid-cols-3 !grid-cols-1 gap-4">
-          <div class="flex h-48 justify-between items-center flex-col py-6">
-            <p class="text-gray-500">Strategic Partner are Asiacell and Asas</p>
-            <img src="/imgs/brands/03.png" alt="brand" class="w-48">
+        <div class="grid lg:grid-cols-3 xl:grid-cols-3 grid-cols-1 rounded-md">
+          <div class="w-full bg-gray-200 h-72">
+            <div class="w-full bg-white flex h-full justify-between items-center flex-col py-6 first-item-clip-path">
+              <p class="text-gray-500">Strategic Partner are Asiacell and Asas</p>
+              <img src="/imgs/brands/03.png" alt="brand" class="w-48">
+            </div>
           </div>
-          <div class="flex h-48 justify-between items-center flex-col py-6">
-            <p class="text-gray-500">Partner Fusteka Group</p>
-            <img src="/imgs/brands/01.png" alt="brand" class="w-48">
+          <div class="w-full bg-gray-200 h-72">
+            <div class="flex bg-white h-full justify-between items-center flex-col py-6 second-item-clip-path">
+              <p class="text-gray-500">Partner Fusteka Group</p>
+              <img src="/imgs/brands/01.png" alt="brand" class="w-48">
+            </div>
           </div>
-          <div class="flex h-48 justify-between items-center flex-col py-6">
-            <p class="text-gray-500">Sponsor Basra MAs</p>
-            <img src="/imgs/brands/02.png" alt="brand" class="w-16">
+          <div class=" w-full bg-gray-200 h-72">
+            <div class="flex h-full justify-between items-center bg-white flex-col py-6 third-item-clip-path">
+              <p class="text-gray-500">Sponsor Basra MAs</p>
+              <img src="/imgs/brands/02.png" alt="brand" class="w-16">
+            </div>
           </div>
         </div>
         <div class="pt-8 lg:pt-20 xl:pt-20">

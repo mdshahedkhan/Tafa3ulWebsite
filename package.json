@@ -17,6 +17,7 @@
     "nuxt": "^3.14.1592",
     "split-type": "^0.3.4",
     "swiper": "^11.1.15",
+    "tailwind-clip-path": "^1.0.0",
     "vercel": "^39.2.1",
     "vue": "latest",
     "vue-router": "latest"

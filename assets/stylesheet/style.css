@@ -241,3 +241,116 @@
     @apply mx-auto;
     margin-bottom: -7%;
 }
+
+
+.hero-slide-image {
+    @apply w-72;
+    @apply w-72;
+}
+
+@media (max-width: 1336px) {
+    .hero-slide-image {
+        width: 240px;
+    }
+}
+@media (max-width: 1136px) {
+    .hero-slide-image {
+        width: 220px;
+    }
+}
+@media (max-width: 1024px) {
+    .hero-slide-image {
+        width: 240px;
+    }
+}
+@media (max-width: 876px) {
+    .hero-slide-image {
+        width: 190px;
+    }
+}
+@media (max-width: 776px) {
+    .hero-slide-image {
+        width: 210px;
+    }
+}
+@media (max-width: 676px) {
+    .hero-slide-image {
+        width: 220px;
+    }
+}
+@media (max-width: 576px) {
+    .hero-slide-image {
+        width: 160px;
+    }
+}
+@media (max-width: 476px) {
+    .hero-slide-image {
+        width: 145px;
+    }
+}
+@media (max-width: 376px) {
+    .hero-slide-image {
+        width: 120px;
+    }
+}
+
+.first-item-clip-path {
+    @apply lg:[clip-path:polygon(30%_0%,_70%_0%,_100%_0,_99%_50%,_100%_100%,_0_100%,_0_55%,_0_0);];
+    @apply xl:[clip-path:polygon(30%_0%,_70%_0%,_100%_0,_99%_50%,_100%_100%,_0_100%,_0_55%,_0_0);];
+    /*@apply md:[clip-path:polygon(50%_0%,_100%_0,_100%_100%,_50%_99%,_0_100%,_0_0);];
+    @apply sm:[clip-path:polygon(50%_0%,_100%_0,_100%_100%,_50%_99%,_0_100%,_0_0);];*/
+}
+
+.second-item-clip-path {
+    @apply lg:[clip-path:polygon(30%_0%,_70%_0%,_100%_0,_99%_50%,_100%_100%,_0_100%,_1%_50%,_0_0);];
+    @apply xl:[clip-path:polygon(30%_0%,_70%_0%,_100%_0,_99%_50%,_100%_100%,_0_100%,_1%_50%,_0_0);];
+    /*@apply md:[clip-path:polygon(50%_1%,_100%_0,_100%_100%,_50%_99%,_0_100%,_0_0);];
+    @apply sm:[clip-path:polygon(50%_1%,_100%_0,_100%_100%,_50%_99%,_0_100%,_0_0);];*/
+}
+
+.third-item-clip-path {
+    @apply xl:[clip-path:polygon(30%_0%,_100%_0,_100%_100%,_70%_100%,_0_100%,_1%_50%,_0_0);];
+    @apply lg:[clip-path:polygon(30%_0%,_100%_0,_100%_100%,_70%_100%,_0_100%,_1%_50%,_0_0);];
+    /*@apply md:[clip-path:polygon(50%_1%,_100%_0,_100%_100%,_0_100%,_0_0);];
+    @apply sm:[clip-path:polygon(50%_1%,_100%_0,_100%_100%,_0_100%,_0_0);];*/
+}
+
+.stepper-border-top {
+    @apply relative;
+    @apply after:bg-gradient-to-b;
+    @apply after:from-[#F7645C];
+    @apply xl:after:w-0.5;
+    @apply lg:after:w-0.5;
+
+    @apply xl:after:h-full;
+    @apply lg:after:h-full;
+
+    @apply after:inline-block;
+    @apply after:absolute;
+    @apply after:top-0;
+    @apply after:mt-3;
+    @apply after:left-4;
+    @apply xl:after:left-[5px];
+    @apply lg:after:left-[5px];
+}
+
+@media (max-width: 1024px) {
+    .stepper-border-top {
+        @apply after:w-full;
+        @apply after:h-0.5;
+        @apply after:left-0;
+        @apply pt-[0.5rem];
+        @apply after:from-[#F7645C];
+        @apply after:to-transparent;
+        @apply after:to-70%;
+    }
+    .stepper-border-top {
+        @apply after:w-full;
+        @apply after:h-0.5;
+        @apply after:left-0;
+        @apply pt-[0.5rem];
+        @apply after:from-[#F7645C];
+        @apply after:to-transparent;
+        @apply after:to-70%;
+    }
+}
